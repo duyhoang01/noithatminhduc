@@ -1,13 +1,13 @@
-# D-Furniture — Claude Context
+# MD-Furniture — Claude Context
 
 ## 🎯 Mục tiêu dự án
 
-Xây dựng website **D-Furniture** theo style của Stripe Apps (stripe.com/apps):
+Xây dựng website **MD-Furniture** theo style của Stripe Apps (stripe.com/apps):
 - Design: clean, modern, gradient accent tím/xanh, typography rõ ràng
 - Tham chiếu: `stripe.com_apps_ref=godly.png` trong thư mục gốc
 - Mỗi thay đổi lớn: chụp screenshot và so sánh với design gốc
 
-D-Furniture là **hệ thống CPQ** (Configure Price Quote – cấu hình & báo giá nội thất).
+MD-Furniture là **hệ thống CPQ** (Configure Price Quote – cấu hình & báo giá nội thất).
 
 ### MVP
 - User cấu hình sản phẩm theo phòng

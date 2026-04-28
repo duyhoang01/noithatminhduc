@@ -19,7 +19,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">D</span>
               </div>
-              <span className="font-semibold text-white">D-Furniture</span>
+              <span className="font-semibold text-white">MD-Furniture</span>
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               Hệ thống CPQ Nội thất thông minh cho đại lý và nhà phân phối.
@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-blue-300 text-sm">
-            © 2024 D-Furniture. Bảo lưu mọi quyền.
+            © 2024 MD-Furniture. Bảo lưu mọi quyền.
           </span>
           <div className="flex gap-4">
             {["Điều khoản", "Bảo mật", "Cookie"].map((item) => (

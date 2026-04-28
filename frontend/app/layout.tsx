@@ -8,9 +8,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "D-Furniture — Hệ thống Cấu hình & Báo giá Nội thất",
+  title: "MD-Furniture — Hệ thống Cấu hình & Báo giá Nội thất",
   description:
-    "D-Furniture là hệ thống CPQ giúp đại lý nội thất cấu hình sản phẩm theo phòng, tính giá realtime và tạo báo giá chuyên nghiệp chỉ trong 5 phút.",
+    "MD-Furniture là hệ thống CPQ giúp đại lý nội thất cấu hình sản phẩm theo phòng, tính giá realtime và tạo báo giá chuyên nghiệp chỉ trong 5 phút.",
 };
 
 export default function RootLayout({

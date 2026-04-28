@@ -7,7 +7,7 @@ import AnimatedSection from "./AnimatedSection";
 const testimonials = [
   {
     quote:
-      "D-Furniture giúp chúng tôi rút ngắn thời gian báo giá từ 1 tiếng xuống còn 5 phút. Khách hàng rất ấn tượng với sự chuyên nghiệp.",
+      "MD-Furniture giúp chúng tôi rút ngắn thời gian báo giá từ 1 tiếng xuống còn 5 phút. Khách hàng rất ấn tượng với sự chuyên nghiệp.",
     name: "Nguyễn Văn Minh",
     role: "Giám đốc kinh doanh",
     company: "Nội thất Hoàng Gia",
@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     quote:
-      "Giá realtime và PDF báo giá chuyên nghiệp là hai tính năng chúng tôi cần nhất. D-Furniture có cả hai, lại còn dễ dùng.",
+      "Giá realtime và PDF báo giá chuyên nghiệp là hai tính năng chúng tôi cần nhất. MD-Furniture có cả hai, lại còn dễ dùng.",
     name: "Lê Quang Dũng",
     role: "CEO",
     company: "Smart Living Vietnam",

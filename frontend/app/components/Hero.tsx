@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
             className="text-lg md:text-xl text-[#425466] max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            D-Furniture giúp bạn cấu hình nội thất theo từng phòng, tính giá
+            MD-Furniture giúp bạn cấu hình nội thất theo từng phòng, tính giá
             realtime và tạo báo giá chuyên nghiệp chỉ trong vài phút — không
             cần nghiệp vụ phức tạp.
           </motion.p>

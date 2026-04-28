@@ -40,7 +40,7 @@ export default function Navbar() {
               <span className="text-white font-bold text-sm">D</span>
             </div>
             <span className="font-semibold text-[#0a2540] text-base">
-              D-Furniture
+              MD-Furniture
             </span>
           </a>
 

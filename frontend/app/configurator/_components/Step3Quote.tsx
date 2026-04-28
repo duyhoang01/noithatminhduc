@@ -49,7 +49,7 @@ export default function Step3Quote({ roomTotals, packageItems, selections, prici
             <div>
               <h1 className="text-xl font-black text-[#0a2540]">Báo giá Chi tiết</h1>
               <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-widest mt-0.5">
-                D-FURNITURE ENGINE V4.1
+                MD-FURNITURE ENGINE V4.1
               </p>
             </div>
           </div>

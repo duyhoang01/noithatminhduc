@@ -24,7 +24,7 @@ export default function WizardHeader({ step, onStepClick }: Props) {
             D
           </div>
           <span className="font-semibold text-sm tracking-wide" style={{ color: '#0a2540' }}>
-            D-FURNITURE
+            MD-FURNITURE
           </span>
         </div>
 
