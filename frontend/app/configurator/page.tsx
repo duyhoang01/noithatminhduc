@@ -10,7 +10,7 @@ import PricingBar from '../configure/_components/PricingBar';
 import Step2Config from '../configure/_components/Step2Config';
 import Step3Quote from './_components/Step3Quote';
 
-const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001/api';
+const API = (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001').replace(/\/+$/, '') + '/api';
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${API}${path}`);

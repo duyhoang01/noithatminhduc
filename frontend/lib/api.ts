@@ -8,7 +8,7 @@ import type {
   Variant,
 } from './types';
 
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001/api';
+const BASE = (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001').replace(/\/+$/, '') + '/api';
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
