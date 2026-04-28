@@ -1,0 +1,284 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id                 BigInt               @id @default(autoincrement())
+  sku_root           String?              @unique @db.VarChar(100)
+  name               String?              @db.VarChar(300)
+  category           String?              @db.VarChar(100)
+  description        String?
+  multi_unit_allowed Boolean?             @default(false)
+  default_image_url  String?
+  created_at         DateTime?            @default(now()) @db.Timestamptz(6)
+  configuration_line configuration_line[]
+  package_item       package_item[]
+  product_variant    product_variant[]
+  product_images     product_images[]
+
+  @@map("product")
+}
+
+model Distributor {
+  id                    BigInt                    @id @default(autoincrement())
+  name                  String?                   @db.VarChar(200)
+  code                  String?                   @unique @db.VarChar(50)
+  province_id           Int?
+  villa_surcharge_pct   Decimal?                  @default(15.00) @db.Decimal(5, 2)
+  status                distributor_status_enum?  @default(active)
+  configuration_session configuration_session[]
+  prices                DistributorVariantPrice[]
+  order                 order[]
+  Package               Package[]
+
+  @@map("distributor")
+}
+
+model DistributorVariantPrice {
+  distributor_id         BigInt
+  variant_id             BigInt
+  current_unit_price     BigInt?
+  current_lead_time_days Int?
+  current_stock_status   stock_status_enum?
+  distributor            Distributor        @relation(fields: [distributor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  variant                product_variant    @relation(fields: [variant_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([distributor_id, variant_id])
+  @@map("distributor_variant_price")
+}
+
+model PricingSnapshot {
+  id                  BigInt  @id @default(autoincrement())
+  order_id            BigInt?
+  sum_lines           BigInt?
+  package_discount    BigInt?
+  manual_discount     BigInt?
+  subtotal_after_disc BigInt?
+  vat_amount          BigInt?
+  total               BigInt?
+  order               order?  @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("pricing_snapshot")
+}
+
+model Lead {
+  id                    BigInt                 @id @default(autoincrement())
+  customer_id           BigInt?
+  session_id            BigInt?
+  status                lead_status_enum?      @default(New)
+  customer              customer?              @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  configuration_session configuration_session? @relation(fields: [session_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("lead")
+}
+
+model configuration_line {
+  id                    BigInt                @id @default(autoincrement())
+  session_id            BigInt
+  configuration_room_id BigInt?
+  product_id            BigInt?
+  variant_id            BigInt
+  quantity              Int?
+  unit_price_snapshot   BigInt?
+  configuration_room    configuration_room?   @relation(fields: [configuration_room_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  product               Product?              @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  configuration_session configuration_session @relation(fields: [session_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  product_variant       product_variant       @relation(fields: [variant_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([session_id, variant_id])
+}
+
+model configuration_room {
+  id                    BigInt                 @id @default(autoincrement())
+  session_id            BigInt?
+  room_id               BigInt?
+  custom_name           String?                @db.VarChar(100)
+  configuration_line    configuration_line[]
+  room                  room?                  @relation(fields: [room_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  configuration_session configuration_session? @relation(fields: [session_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model configuration_session {
+  id                 BigInt               @id @default(autoincrement())
+  customer_id        BigInt?
+  property_type      property_type_enum?
+  segment            segment_enum?
+  distributor_id     BigInt?
+  package_id         BigInt?
+  status             String?              @default("Draft") @db.VarChar(50)
+  version            Int?                 @default(1)
+  configuration_line configuration_line[]
+  configuration_room configuration_room[]
+  customer           customer?            @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  distributor        Distributor?         @relation(fields: [distributor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  lead               Lead[]
+}
+
+model customer {
+  id                    BigInt                  @id @default(autoincrement())
+  full_name             String                  @db.VarChar(200)
+  phone                 String                  @unique @db.VarChar(20)
+  email                 String?                 @db.VarChar(200)
+  province_id           Int?
+  address               String?                 @db.VarChar(500)
+  marketing_consent     Boolean?                @default(false)
+  created_at            DateTime?               @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime?               @default(now()) @db.Timestamptz(6)
+  archived_at           DateTime?               @db.Timestamptz(6)
+  configuration_session configuration_session[]
+  lead                  Lead[]
+  order                 order[]
+}
+
+model order {
+  id               BigInt                @id @default(autoincrement())
+  code             String?               @unique @db.VarChar(50)
+  customer_id      BigInt?
+  distributor_id   BigInt?
+  status           order_status_enum?    @default(Draft)
+  payment_status   payment_status_enum?  @default(NotPaid)
+  warranty_status  warranty_status_enum? @default(PendingCheck)
+  version          Int?                  @default(1)
+  customer         customer?             @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  distributor      Distributor?          @relation(fields: [distributor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  order_item       order_item[]
+  pricing_snapshot PricingSnapshot[]
+}
+
+model order_item {
+  id                    BigInt  @id @default(autoincrement())
+  order_id              BigInt?
+  product_id            BigInt?
+  variant_id            BigInt?
+  product_name_snapshot String? @db.VarChar(300)
+  variant_name_snapshot String? @db.VarChar(300)
+  quantity              Int?
+  unit_price            BigInt?
+  total_price           BigInt?
+  room_name             String? @db.VarChar(100)
+  order                 order?  @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+/// This model has been renamed to 'Package' during introspection, because the original name 'package' is reserved.
+model Package {
+  id                      BigInt         @id @default(autoincrement())
+  code                    String?        @unique @db.VarChar(100)
+  name                    String?        @db.VarChar(300)
+  segment                 segment_enum?
+  distributor_id          BigInt?
+  base_price              BigInt?
+  package_discount_amount BigInt?
+  min_adherence           Decimal?       @default(0.8) @db.Decimal(4, 3)
+  version                 Int?           @default(1)
+  distributor             Distributor?   @relation(fields: [distributor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  package_item            package_item[]
+
+  @@map("package")
+}
+
+model package_item {
+  id                 BigInt           @id @default(autoincrement())
+  package_id         BigInt?
+  product_id         BigInt?
+  default_variant_id BigInt?
+  room_id            BigInt?
+  quantity           Int?             @default(1)
+  is_mandatory       Boolean?         @default(false)
+  product_variant    product_variant? @relation(fields: [default_variant_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Package            Package?         @relation(fields: [package_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  product            Product?         @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  room               room?            @relation(fields: [room_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model product_variant {
+  id                 BigInt                    @id @default(autoincrement())
+  product_id         BigInt?
+  sku                String?                   @unique @db.VarChar(150)
+  size               String?                   @db.VarChar(100)
+  material           String?                   @db.VarChar(100)
+  color              String?                   @db.VarChar(100)
+  configuration_line configuration_line[]
+  prices             DistributorVariantPrice[]
+  package_item       package_item[]
+  product            Product?                  @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  product_images     product_images[]
+}
+
+model product_images {
+  id         BigInt           @id @default(autoincrement())
+  product_id BigInt?
+  variant_id BigInt?
+  file_path  String?          @db.VarChar(500)
+  public_url String?          @db.VarChar(500)
+  is_primary Boolean?         @default(false)
+  image_type String?          @db.VarChar(10)
+  product    Product?         @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  variant    product_variant? @relation(fields: [variant_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("product_images")
+}
+
+model room {
+  id                 BigInt               @id @default(autoincrement())
+  code               String?              @unique @db.VarChar(50)
+  name               String?              @db.VarChar(200)
+  configuration_room configuration_room[]
+  package_item       package_item[]
+}
+
+enum distributor_status_enum {
+  active
+  paused
+  terminated
+}
+
+enum lead_status_enum {
+  New
+  Contacted
+  Closed_Won  @map("Closed-Won")
+  Closed_Lost @map("Closed-Lost")
+}
+
+enum order_status_enum {
+  Draft
+  Confirmed
+  InProduction
+  Installing
+  Completed
+  Closed
+  Cancelled
+}
+
+enum payment_status_enum {
+  NotPaid
+  DepositPaid
+  PartiallyPaid
+  FullyPaid
+}
+
+enum property_type_enum {
+  APARTMENT
+  VILLA
+}
+
+enum segment_enum {
+  LOW
+  MID
+  HIGH
+}
+
+enum stock_status_enum {
+  in_stock
+  made_to_order
+  out_of_stock
+}
+
+enum warranty_status_enum {
+  PendingCheck
+  Checked
+}
