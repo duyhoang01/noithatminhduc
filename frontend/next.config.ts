@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
-      { source: "/minh-bach", destination: "/minh-bach.html" },
+      { source: "/uu-dai-thang-9", destination: "/uu-dai-thang-9.html" },
     ];
   },
 };
