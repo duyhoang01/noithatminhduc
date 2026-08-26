@@ -1,5 +1,7 @@
 # PRD — Website Minh Đức AIC (noithatminhduc)
 
+> **Cập nhật 2026-08-26 (v3):** Site đã chuyển từ 1 trang cuộn sang **multi-page**. Ngoài các section trên `/`, đã thêm: `/san-pham`, `/ve-chung-toi`, `/lien-he`, `/quy-trinh` (+ 4 trang con: tu-van, khao-sat, thiet-ke, nghiem-thu), `/chinh-sach/thanh-toan`, `/chinh-sach/bao-hanh`, `/chinh-sach/khuyen-mai`. Nội dung quy trình lấy từ `Alan/03_Van_Hanh/Quy_Trinh/`, đã lược bỏ toàn bộ phần nội bộ (script bán hàng, margin, ghi chú "không nói với khách"). `/configure` đã đổi tên thành `/bao-gia`; `/configurator` (route trùng lặp) đã xoá — sẽ làm lại sau dưới dạng phiên bản có tài khoản. Menu "Dịch vụ" đổi thành "Sản phẩm". Blog vẫn chưa làm (chốt sau, theo quyết định trước đó).
+
 > Trạng thái: Draft v2 — đã cập nhật theo feedback (màu sắc thương hiệu, thêm "Về chúng tôi" + "Sản phẩm tiêu biểu", thêm Blog). Chờ chốt các quyết định ở §9 trước khi code.
 > Phạm vi: trang chủ tiếp thị (`frontend/app/page.tsx` + components) + mục Blog mới. Không bao gồm `/configure`, `/configurator` (công cụ báo giá — đã hoạt động đúng, xem §8).
 
