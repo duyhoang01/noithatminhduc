@@ -88,7 +88,7 @@ export default function Catalog() {
                     ))}
                   </div>
                   <Link
-                    href="/configure"
+                    href="/bao-gia"
                     className="mt-4 flex items-center gap-1 text-xs font-medium text-[#8a6530] group-hover:gap-2 transition-all"
                   >
                     Xem báo giá tham khảo
