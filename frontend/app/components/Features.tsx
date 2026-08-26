@@ -3,51 +3,51 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  LayoutGrid,
-  Calculator,
-  FileText,
-  Users,
-  ImageIcon,
-  Zap,
+  ShieldCheck,
+  Ruler,
+  Truck,
+  Boxes,
+  ClipboardCheck,
+  BadgeCheck,
 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const features = [
   {
-    icon: LayoutGrid,
-    color: "bg-indigo-50 text-indigo-600",
-    title: "Cấu hình theo phòng",
-    desc: "Tổ chức nội thất theo từng phòng và tầng. Dễ dàng thêm, sửa, xóa sản phẩm trong từng không gian.",
+    icon: ShieldCheck,
+    color: "bg-amber-50 text-[#8a6530]",
+    title: "Giá minh bạch, không phát sinh",
+    desc: "Báo giá rõ từng hạng mục sau khảo sát thực tế. Không đội giá giữa chừng, không phí ẩn.",
   },
   {
-    icon: Calculator,
-    color: "bg-purple-50 text-purple-600",
-    title: "Tính giá realtime",
-    desc: "Giá được tính ngay lập tức khi bạn thêm hoặc thay đổi sản phẩm. Không cần chờ đợi, không cần tính tay.",
+    icon: Ruler,
+    color: "bg-orange-50 text-orange-700",
+    title: "Khảo sát & đo đạc tận nơi",
+    desc: "Đội ngũ đến tận nhà đo đạc trước khi báo giá, đảm bảo thiết kế khớp đúng không gian thật.",
   },
   {
-    icon: FileText,
-    color: "bg-blue-50 text-blue-600",
-    title: "Báo giá chuyên nghiệp",
-    desc: "Tạo báo giá PDF đẹp, có thể gửi cho khách hàng ngay. Bao gồm danh sách sản phẩm, giá và thông tin đại lý.",
+    icon: Truck,
+    color: "bg-stone-100 text-stone-700",
+    title: "Kinh nghiệm nguồn hàng gia đình",
+    desc: "Gia đình có kinh nghiệm nhiều năm trong ngành nội thất — lợi thế chuỗi cung ứng, kiểm soát chất lượng đầu vào.",
   },
   {
-    icon: Users,
-    color: "bg-green-50 text-green-600",
-    title: "Quản lý đại lý",
-    desc: "Hệ thống phân quyền cho đại lý, nhân viên kinh doanh. Mỗi đại lý có giá riêng được cấu hình sẵn.",
+    icon: Boxes,
+    color: "bg-amber-50 text-[#8a6530]",
+    title: "Thiết kế 3D trước khi thi công",
+    desc: "Nhận phối cảnh 3D và báo giá chi tiết trước khi ký hợp đồng, hình dung đúng không gian trước khi làm thật.",
   },
   {
-    icon: ImageIcon,
-    color: "bg-orange-50 text-orange-600",
-    title: "Hình ảnh sản phẩm",
-    desc: "Hiển thị hình ảnh thực tế của từng variant sản phẩm. Khách hàng thấy đúng màu sắc, kiểu dáng họ chọn.",
+    icon: ClipboardCheck,
+    color: "bg-orange-50 text-orange-700",
+    title: "Giám sát thi công 4 mốc",
+    desc: "Kiểm tra vật liệu, kết cấu, bề mặt và nghiệm thu theo checklist rõ ràng ở từng giai đoạn.",
   },
   {
-    icon: Zap,
-    color: "bg-pink-50 text-pink-600",
-    title: "Nhanh & Đáng tin cậy",
-    desc: "Xây dựng trên nền tảng Supabase + Redis. Dữ liệu an toàn, tốc độ phản hồi cực nhanh, uptime 99.9%.",
+    icon: BadgeCheck,
+    color: "bg-stone-100 text-stone-700",
+    title: "Bảo hành 24 tháng",
+    desc: "Cam kết bảo hành đầy đủ cho mọi hạng mục nội thất, chi tiết theo hợp đồng.",
   },
 ];
 
@@ -56,19 +56,19 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="features" className="py-24 bg-[#f6f9fc]">
+    <section id="why-us" className="py-24 bg-[#F3EFE7]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold tracking-widest text-indigo-600 uppercase mb-4">
-            Tính năng
+          <span className="inline-block text-xs font-semibold tracking-widest text-[#8a6530] uppercase mb-4">
+            Vì sao chọn chúng tôi
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0a2540] mb-4 leading-tight">
-            Mọi công cụ bạn cần để{" "}
-            <span className="gradient-text">báo giá nội thất</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#241f1a] mb-4 leading-tight">
+            Nội thất{" "}
+            <span className="gradient-text">minh bạch từ đầu đến cuối</span>
           </h2>
-          <p className="text-lg text-[#425466] max-w-xl mx-auto">
-            Từ cấu hình sản phẩm đến tạo báo giá — tất cả trong một nền tảng
-            thống nhất, không cần phần mềm phức tạp.
+          <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
+            Minh Đức AIC đồng hành cùng bạn từ khảo sát, thiết kế đến thi công
+            và bảo hành — không phát sinh bất ngờ.
           </p>
         </AnimatedSection>
 
@@ -86,8 +86,8 @@ export default function Features() {
                 <div className={`w-10 h-10 rounded-xl ${feature.color} flex items-center justify-center mb-4`}>
                   <Icon size={20} />
                 </div>
-                <h3 className="font-semibold text-[#0a2540] mb-2">{feature.title}</h3>
-                <p className="text-sm text-[#425466] leading-relaxed">{feature.desc}</p>
+                <h3 className="font-semibold text-[#241f1a] mb-2">{feature.title}</h3>
+                <p className="text-sm text-[#6b6459] leading-relaxed">{feature.desc}</p>
               </motion.div>
             );
           })}

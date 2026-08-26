@@ -3,32 +3,27 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 const categories = [
   {
-    name: "Phòng khách",
-    count: "48 sản phẩm",
-    color: "from-indigo-400 to-purple-500",
-    items: ["Sofa", "Bàn cà phê", "Kệ TV", "Tủ trang trí"],
+    name: "Căn hộ chung cư",
+    count: "Sun Urban City",
+    color: "from-[#a67c3d] to-[#c9974f]",
+    items: ["Nội thất trọn gói", "3 gói: Cơ bản / Tiêu chuẩn / Cao cấp", "Áp dụng cho căn đã bàn giao xây dựng"],
   },
   {
-    name: "Phòng ngủ",
-    count: "36 sản phẩm",
-    color: "from-purple-400 to-pink-500",
-    items: ["Giường", "Tủ quần áo", "Bàn phấn", "Kệ đầu giường"],
+    name: "Liền kề",
+    count: "Sun Urban City",
+    color: "from-[#8a6530] to-[#a67c3d]",
+    items: ["Thiết kế + thi công điện, nước, sơn bả", "Trần thạch cao", "Nội thất trọn gói"],
   },
   {
-    name: "Phòng bếp",
-    count: "29 sản phẩm",
-    color: "from-orange-400 to-red-500",
-    items: ["Tủ bếp", "Bàn đảo bếp", "Ghế bar", "Giá đồ"],
-  },
-  {
-    name: "Phòng làm việc",
-    count: "22 sản phẩm",
-    color: "from-blue-400 to-cyan-500",
-    items: ["Bàn làm việc", "Ghế văn phòng", "Kệ sách", "Tủ hồ sơ"],
+    name: "Nhà dân",
+    count: "Nam Định · Phủ Lý · Bình Lục",
+    color: "from-stone-500 to-stone-700",
+    items: ["Nội thất trọn gói", "Điện nhẹ (điều hòa, máy giặt, tủ lạnh)", "Không đụng xây dựng thô"],
   },
 ];
 
@@ -40,22 +35,22 @@ export default function Catalog() {
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold tracking-widest text-orange-600 uppercase mb-4">
-            Danh mục sản phẩm
+          <span className="inline-block text-xs font-semibold tracking-widest text-[#8a6530] uppercase mb-4">
+            Dịch vụ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0a2540] mb-4">
-            Khám phá danh mục{" "}
-            <span className="gradient-text-warm">nội thất phong phú</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#241f1a] mb-4">
+            Dịch vụ theo{" "}
+            <span className="gradient-text-warm">từng loại hình nhà</span>
           </h2>
-          <p className="text-lg text-[#425466] max-w-xl mx-auto">
-            Hàng trăm sản phẩm từ các nhà sản xuất uy tín, cập nhật liên tục.
-            Mỗi sản phẩm có đầy đủ hình ảnh, variant và giá niêm yết.
+          <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
+            Mỗi phân khúc có scope thi công khác nhau — khảo sát tận nơi để
+            nhận báo giá đúng với nhu cầu thực tế.
           </p>
         </AnimatedSection>
 
         <motion.div
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {categories.map((cat, i) => (
             <motion.div
@@ -80,22 +75,25 @@ export default function Catalog() {
                 </div>
                 {/* Content */}
                 <div className="p-4 bg-white">
-                  <div className="text-xs text-[#425466] mb-3">{cat.count}</div>
+                  <div className="text-xs text-[#6b6459] mb-3">{cat.count}</div>
                   <div className="space-y-1">
                     {cat.items.map((item, j) => (
                       <div
                         key={j}
-                        className="text-xs text-[#425466] flex items-center gap-1.5"
+                        className="text-xs text-[#6b6459] flex items-center gap-1.5"
                       >
                         <div className="w-1 h-1 rounded-full bg-gray-300" />
                         {item}
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 flex items-center gap-1 text-xs font-medium text-indigo-600 group-hover:gap-2 transition-all">
-                    Xem tất cả
+                  <Link
+                    href="/configure"
+                    className="mt-4 flex items-center gap-1 text-xs font-medium text-[#8a6530] group-hover:gap-2 transition-all"
+                  >
+                    Xem báo giá tham khảo
                     <ArrowRight size={12} />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </motion.div>
