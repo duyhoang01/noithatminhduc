@@ -2,15 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden hero-gradient">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-20 -left-20 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-pink-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-40" />
+        <div className="absolute top-20 -left-20 w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-stone-200 rounded-full blur-3xl opacity-30" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -22,9 +21,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             className="inline-flex mb-6"
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-100">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-50 text-[#8a6530] border border-amber-100">
               <Sparkles size={12} />
-              Hệ thống CPQ Nội thất #1 Việt Nam
+              Thiết kế & thi công nội thất trọn gói · Sun Urban City &amp; Hà Nam
             </span>
           </motion.div>
 
@@ -33,12 +32,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#0a2540] leading-tight tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#241f1a] leading-tight tracking-tight mb-6"
           >
-            Cấu hình & Báo giá{" "}
-            <span className="gradient-text">Nội thất</span>
+            Nội thất{" "}
+            <span className="gradient-text">Minh Bạch</span>
             <br />
-            Thông minh & Chính xác
+            Giá đúng ngay từ đầu
           </motion.h1>
 
           {/* Subtitle */}
@@ -46,11 +45,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-            className="text-lg md:text-xl text-[#425466] max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-[#6b6459] max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            MD-Furniture giúp bạn cấu hình nội thất theo từng phòng, tính giá
-            realtime và tạo báo giá chuyên nghiệp chỉ trong vài phút — không
-            cần nghiệp vụ phức tạp.
+            Minh Đức AIC thiết kế và thi công nội thất trọn gói cho căn hộ,
+            liền kề và nhà dân — khảo sát tận nơi, báo giá minh bạch, không
+            phát sinh.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -60,21 +59,21 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.62, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           >
-            <Link
-              href="/configurator"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#635bff] hover:bg-[#4f46e5] text-white font-medium text-sm transition-all shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:-translate-y-0.5"
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#a67c3d] hover:bg-[#8a6530] text-white font-medium text-sm transition-all shadow-lg shadow-amber-200 hover:shadow-amber-300 hover:-translate-y-0.5"
             >
-              Bắt đầu cấu hình ngay
+              Nhận khảo sát &amp; báo giá miễn phí
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"
               />
-            </Link>
+            </a>
             <a
-              href="#features"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#0a2540] font-medium text-sm border border-gray-200 hover:border-gray-300 transition-all"
+              href="#pricing"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#241f1a] font-medium text-sm border border-gray-200 hover:border-gray-300 transition-all"
             >
-              Xem tính năng
+              Xem dịch vụ
             </a>
           </motion.div>
 
@@ -83,25 +82,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.75, ease: "easeOut" }}
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[#425466]"
+            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[#6b6459]"
           >
-            <span className="flex items-center gap-2">
-              <span className="flex -space-x-1">
-                {["bg-indigo-400", "bg-purple-400", "bg-pink-400", "bg-blue-400"].map(
-                  (color, i) => (
-                    <span
-                      key={i}
-                      className={`w-6 h-6 rounded-full ${color} border-2 border-white`}
-                    />
-                  )
-                )}
-              </span>
-              1,200+ đại lý đang dùng
-            </span>
+            <span>Khảo sát tận nơi trong 48h</span>
             <span className="hidden sm:block w-px h-4 bg-gray-200" />
-            <span>Báo giá trong 5 phút</span>
+            <span>Báo giá minh bạch, không phát sinh</span>
             <span className="hidden sm:block w-px h-4 bg-gray-200" />
-            <span>Không cần thẻ tín dụng</span>
+            <span>Bảo hành 24 tháng</span>
           </motion.div>
         </div>
 
@@ -123,7 +110,7 @@ export default function Hero() {
                 </div>
                 <div className="flex-1 mx-4">
                   <div className="bg-white rounded-md px-3 py-1 text-xs text-gray-400 border border-gray-200 max-w-xs mx-auto text-center">
-                    d-furniture.vn/configure
+                    minhducaic.com/bao-gia
                   </div>
                 </div>
               </div>
@@ -132,7 +119,7 @@ export default function Hero() {
                 <div className="flex gap-4 h-52">
                   {/* Left sidebar */}
                   <div className="w-48 bg-gray-50 rounded-xl p-4 flex flex-col gap-3">
-                    <div className="text-xs font-semibold text-[#0a2540] mb-1">
+                    <div className="text-xs font-semibold text-[#241f1a] mb-1">
                       Phòng của bạn
                     </div>
                     {["Phòng khách", "Phòng ngủ", "Phòng bếp"].map((room, i) => (
@@ -140,21 +127,21 @@ export default function Hero() {
                         key={i}
                         className={`px-3 py-2 rounded-lg text-xs font-medium cursor-pointer transition-colors ${
                           i === 0
-                            ? "bg-[#635bff] text-white"
-                            : "text-[#425466] hover:bg-gray-100"
+                            ? "bg-[#a67c3d] text-white"
+                            : "text-[#6b6459] hover:bg-gray-100"
                         }`}
                       >
                         {room}
                       </div>
                     ))}
-                    <button className="mt-auto px-3 py-2 rounded-lg text-xs font-medium text-[#635bff] border border-indigo-200 hover:bg-indigo-50 transition-colors">
+                    <button className="mt-auto px-3 py-2 rounded-lg text-xs font-medium text-[#a67c3d] border border-amber-200 hover:bg-amber-50 transition-colors">
                       + Thêm phòng
                     </button>
                   </div>
 
                   {/* Main content */}
                   <div className="flex-1 flex flex-col gap-3">
-                    <div className="text-sm font-semibold text-[#0a2540]">
+                    <div className="text-sm font-semibold text-[#241f1a]">
                       Phòng khách — Sofa & Bàn
                     </div>
                     {[
@@ -167,23 +154,23 @@ export default function Hero() {
                         className="flex items-center justify-between px-3 py-2.5 bg-gray-50 rounded-lg border border-gray-100"
                       >
                         <div>
-                          <div className="text-xs font-medium text-[#0a2540]">{item.name}</div>
-                          <div className="text-xs text-[#425466]">{item.variant} · SL: {item.qty}</div>
+                          <div className="text-xs font-medium text-[#241f1a]">{item.name}</div>
+                          <div className="text-xs text-[#6b6459]">{item.variant} · SL: {item.qty}</div>
                         </div>
-                        <span className="text-xs font-semibold text-[#635bff]">{item.price}đ</span>
+                        <span className="text-xs font-semibold text-[#a67c3d]">{item.price}đ</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Right panel - Quote summary */}
-                  <div className="w-44 bg-gradient-to-b from-indigo-50 to-purple-50 rounded-xl p-4 flex flex-col gap-2 border border-indigo-100">
-                    <div className="text-xs font-semibold text-[#0a2540]">Báo giá</div>
-                    <div className="text-xs text-[#425466]">3 sản phẩm</div>
+                  <div className="w-44 bg-gradient-to-b from-amber-50 to-orange-50 rounded-xl p-4 flex flex-col gap-2 border border-amber-100">
+                    <div className="text-xs font-semibold text-[#241f1a]">Báo giá</div>
+                    <div className="text-xs text-[#6b6459]">3 sản phẩm</div>
                     <div className="mt-auto">
-                      <div className="text-xs text-[#425466]">Tổng tiền</div>
-                      <div className="text-base font-bold text-[#635bff]">21,500,000đ</div>
+                      <div className="text-xs text-[#6b6459]">Tổng tiền</div>
+                      <div className="text-base font-bold text-[#a67c3d]">21,500,000đ</div>
                     </div>
-                    <button className="mt-2 w-full py-2 rounded-lg bg-[#635bff] text-white text-xs font-medium hover:bg-[#4f46e5] transition-colors">
+                    <button className="mt-2 w-full py-2 rounded-lg bg-[#a67c3d] text-white text-xs font-medium hover:bg-[#8a6530] transition-colors">
                       Tạo báo giá
                     </button>
                   </div>
@@ -197,8 +184,8 @@ export default function Hero() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-8 top-1/3 bg-white rounded-xl shadow-lg border border-gray-100 px-4 py-3 hidden md:block"
             >
-              <div className="text-xs text-[#425466]">Giá realtime</div>
-              <div className="text-sm font-bold text-[#0a2540]">21.5M đ</div>
+              <div className="text-xs text-[#6b6459]">Giá minh bạch</div>
+              <div className="text-sm font-bold text-[#241f1a]">21.5M đ</div>
             </motion.div>
 
             <motion.div
@@ -211,8 +198,8 @@ export default function Hero() {
                   <span className="text-green-600 text-xs">✓</span>
                 </div>
                 <div>
-                  <div className="text-xs font-medium text-[#0a2540]">Báo giá đã tạo</div>
-                  <div className="text-xs text-[#425466]">PDF sẵn sàng</div>
+                  <div className="text-xs font-medium text-[#241f1a]">Báo giá đã tạo</div>
+                  <div className="text-xs text-[#6b6459]">PDF sẵn sàng</div>
                 </div>
               </div>
             </motion.div>

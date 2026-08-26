@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Sản phẩm", href: "#features" },
-  { label: "Cách hoạt động", href: "#how-it-works" },
-  { label: "Báo giá", href: "#pricing" },
+  { label: "Dịch vụ", href: "#pricing" },
+  { label: "Quy trình", href: "#how-it-works" },
+  { label: "Về chúng tôi", href: "#about" },
   { label: "Liên hệ", href: "#contact" },
 ];
 
@@ -36,11 +36,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
+              <span className="text-white font-bold text-sm">M</span>
             </div>
-            <span className="font-semibold text-[#0a2540] text-base">
-              MD-Furniture
+            <span className="font-semibold text-[#241f1a] text-base">
+              Minh Đức AIC
             </span>
           </a>
 
@@ -50,32 +50,26 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-[#425466] hover:text-[#0a2540] transition-colors font-medium"
+                className="text-sm text-[#6b6459] hover:text-[#241f1a] transition-colors font-medium"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href="#contact"
-              className="text-sm font-medium text-[#425466] hover:text-[#0a2540] transition-colors"
+              className="text-sm font-medium text-white bg-[#a67c3d] hover:bg-[#8a6530] px-4 py-2 rounded-full transition-colors"
             >
-              Đăng nhập
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-white bg-[#635bff] hover:bg-[#4f46e5] px-4 py-2 rounded-full transition-colors"
-            >
-              Bắt đầu miễn phí
+              Nhận báo giá miễn phí
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-[#425466]"
+            className="md:hidden p-2 text-[#6b6459]"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -98,16 +92,16 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-[#425466] hover:text-[#0a2540] py-2"
+                  className="text-sm font-medium text-[#6b6459] hover:text-[#241f1a] py-2"
                 >
                   {link.label}
                 </a>
               ))}
               <a
                 href="#contact"
-                className="text-sm font-medium text-white bg-[#635bff] hover:bg-[#4f46e5] px-4 py-2.5 rounded-full text-center transition-colors mt-2"
+                className="text-sm font-medium text-white bg-[#a67c3d] hover:bg-[#8a6530] px-4 py-2.5 rounded-full text-center transition-colors mt-2"
               >
-                Bắt đầu miễn phí
+                Nhận báo giá miễn phí
               </a>
             </div>
           </motion.div>
