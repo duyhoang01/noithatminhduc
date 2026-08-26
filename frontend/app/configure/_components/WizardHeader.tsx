@@ -19,12 +19,12 @@ export default function WizardHeader({ step, onStepClick }: Props) {
         <div className="flex items-center gap-2">
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-            style={{ background: 'linear-gradient(135deg,#635bff,#06b6d4)' }}
+            style={{ background: 'linear-gradient(135deg,#8a6530,#a67c3d)' }}
           >
-            D
+            M
           </div>
-          <span className="font-semibold text-sm tracking-wide" style={{ color: '#0a2540' }}>
-            MD-FURNITURE
+          <span className="font-semibold text-sm tracking-wide" style={{ color: '#241f1a' }}>
+            MINH ĐỨC AIC
           </span>
         </div>
 
