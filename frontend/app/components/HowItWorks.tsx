@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Ruler, FileCheck, HardHat } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 const steps = [
@@ -167,6 +168,16 @@ export default function HowItWorks() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-16">
+          <Link
+            href="/quy-trinh"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F3EFE7] text-[#8a6530] font-medium text-sm hover:bg-amber-100 transition-colors"
+          >
+            Xem chi tiết từng bước quy trình
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </section>

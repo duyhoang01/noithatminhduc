@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -59,24 +60,22 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.62, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           >
-            <button
-              type="button"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#a67c3d] hover:bg-[#8a6530] text-white font-medium text-sm transition-all shadow-lg shadow-amber-200 hover:shadow-amber-300 hover:-translate-y-0.5 border-0 cursor-pointer"
+            <Link
+              href="/lien-he"
+              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#a67c3d] hover:bg-[#8a6530] text-white font-medium text-sm transition-all shadow-lg shadow-amber-200 hover:shadow-amber-300 hover:-translate-y-0.5"
             >
               Nhận khảo sát &amp; báo giá miễn phí
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"
               />
-            </button>
-            <button
-              type="button"
-              onClick={() => document.getElementById("san-pham")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#241f1a] font-medium text-sm border border-gray-200 hover:border-gray-300 transition-all cursor-pointer"
+            </Link>
+            <Link
+              href="/san-pham"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#241f1a] font-medium text-sm border border-gray-200 hover:border-gray-300 transition-all"
             >
               Xem sản phẩm
-            </button>
+            </Link>
           </motion.div>
 
           {/* Trust indicators */}

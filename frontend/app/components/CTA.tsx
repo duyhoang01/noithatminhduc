@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -39,8 +40,8 @@ export default function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:0364223886"
+              <Link
+                href="/lien-he"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#241f1a] font-semibold text-sm hover:bg-gray-100 transition-all shadow-xl"
               >
                 Đăng ký khảo sát miễn phí
@@ -48,7 +49,7 @@ export default function CTA() {
                   size={16}
                   className="group-hover:translate-x-1 transition-transform"
                 />
-              </a>
+              </Link>
               <a
                 href="tel:0364223886"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"

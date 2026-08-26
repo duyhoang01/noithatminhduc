@@ -1,6 +1,7 @@
 "use client";
 
-import { MapPin, Sofa, Handshake } from "lucide-react";
+import { MapPin, Sofa, Handshake, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 const points = [
@@ -44,6 +45,13 @@ export default function AboutUs() {
               tin cậy — nơi khách hàng biết chính xác mình trả tiền cho điều
               gì, từ bản vẽ đầu tiên đến ngày nhận bàn giao.
             </p>
+            <Link
+              href="/ve-chung-toi"
+              className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#8a6530] hover:gap-2 transition-all"
+            >
+              Tìm hiểu thêm về chúng tôi
+              <ArrowRight size={14} />
+            </Link>
           </AnimatedSection>
 
           <AnimatedSection direction="left" delay={0.15} className="space-y-5">

@@ -42,10 +42,17 @@ export default function Catalog() {
             Sản phẩm theo{" "}
             <span className="gradient-text-warm">từng loại hình nhà</span>
           </h2>
-          <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
+          <p className="text-lg text-[#6b6459] max-w-xl mx-auto mb-4">
             Mỗi phân khúc có scope thi công khác nhau — khảo sát tận nơi để
             nhận báo giá đúng với nhu cầu thực tế.
           </p>
+          <Link
+            href="/san-pham"
+            className="inline-flex items-center gap-1 text-sm font-medium text-[#8a6530] hover:gap-2 transition-all"
+          >
+            Xem đầy đủ từng phân khúc
+            <ArrowRight size={14} />
+          </Link>
         </AnimatedSection>
 
         <motion.div
