@@ -32,14 +32,14 @@ export default function Catalog() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="pricing" className="py-24 bg-white">
+    <section id="san-pham" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimatedSection className="text-center mb-16">
           <span className="inline-block text-xs font-semibold tracking-widest text-[#8a6530] uppercase mb-4">
-            Dịch vụ
+            Sản phẩm
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#241f1a] mb-4">
-            Dịch vụ theo{" "}
+            Sản phẩm theo{" "}
             <span className="gradient-text-warm">từng loại hình nhà</span>
           </h2>
           <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
