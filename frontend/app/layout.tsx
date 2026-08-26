@@ -8,9 +8,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "MD-Furniture — Hệ thống Cấu hình & Báo giá Nội thất",
+  title: "Minh Đức AIC — Thiết kế & Thi công Nội thất trọn gói",
   description:
-    "MD-Furniture là hệ thống CPQ giúp đại lý nội thất cấu hình sản phẩm theo phòng, tính giá realtime và tạo báo giá chuyên nghiệp chỉ trong 5 phút.",
+    "Minh Đức AIC thiết kế và thi công nội thất trọn gói cho căn hộ, liền kề và nhà dân tại Sun Urban City, Phủ Lý, Hà Nam. Giá minh bạch, khảo sát tận nơi, bảo hành 24 tháng.",
 };
 
 export default function RootLayout({

@@ -1,28 +1,27 @@
 "use client";
 
 const footerLinks = {
-  "Sản phẩm": ["Cấu hình nội thất", "Báo giá tự động", "Quản lý đại lý", "Danh mục sản phẩm"],
-  "Doanh nghiệp": ["Về chúng tôi", "Blog", "Đối tác", "Tuyển dụng"],
-  "Hỗ trợ": ["Tài liệu hướng dẫn", "FAQ", "Liên hệ", "Chính sách bảo mật"],
-  "Liên hệ": ["0123 456 789", "info@d-furniture.vn", "Hà Nội, Việt Nam"],
+  "Dịch vụ": ["Nội thất căn hộ chung cư", "Nội thất liền kề", "Nội thất nhà dân", "Xem báo giá tham khảo"],
+  "Về Minh Đức AIC": ["Về chúng tôi", "Quy trình làm việc", "Chính sách bảo hành"],
+  "Liên hệ": ["Hotline/Zalo: 0364 223 886", "minhducaiccompany@gmail.com", "Sun Urban City & khu vực Hà Nam"],
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a2540] py-16">
+    <footer className="bg-[#241f1a] py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Top */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">D</span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
+                <span className="text-white font-bold text-sm">M</span>
               </div>
-              <span className="font-semibold text-white">MD-Furniture</span>
+              <span className="font-semibold text-white">Minh Đức AIC</span>
             </div>
-            <p className="text-blue-200 text-sm leading-relaxed">
-              Hệ thống CPQ Nội thất thông minh cho đại lý và nhà phân phối.
+            <p className="text-amber-100/70 text-sm leading-relaxed">
+              Thiết kế &amp; thi công nội thất trọn gói — giá minh bạch, bảo hành 24 tháng.
             </p>
           </div>
 
@@ -33,12 +32,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
-                      className="text-blue-200 text-sm hover:text-white transition-colors"
-                    >
-                      {link}
-                    </a>
+                    <span className="text-amber-100/70 text-sm">{link}</span>
                   </li>
                 ))}
               </ul>
@@ -48,20 +42,12 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-blue-300 text-sm">
-            © 2024 MD-Furniture. Bảo lưu mọi quyền.
+          <span className="text-amber-100/60 text-sm">
+            © 2026 Minh Đức AIC. Bảo lưu mọi quyền.
           </span>
-          <div className="flex gap-4">
-            {["Điều khoản", "Bảo mật", "Cookie"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-blue-300 text-sm hover:text-white transition-colors"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+          <span className="text-amber-100/60 text-sm">
+            Bảo hành 24 tháng cho mọi hạng mục nội thất — chi tiết theo hợp đồng
+          </span>
         </div>
       </div>
     </footer>
