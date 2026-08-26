@@ -1,9 +1,24 @@
 "use client";
 
+import Link from "next/link";
+
 const footerLinks = {
-  "Dịch vụ": ["Nội thất căn hộ chung cư", "Nội thất liền kề", "Nội thất nhà dân", "Xem báo giá tham khảo"],
-  "Về Minh Đức AIC": ["Về chúng tôi", "Quy trình làm việc", "Chính sách bảo hành"],
-  "Liên hệ": ["Hotline/Zalo: 0364 223 886", "minhducaiccompany@gmail.com", "Sun Urban City & khu vực Hà Nam"],
+  "Sản phẩm": [
+    { label: "Nội thất căn hộ chung cư", href: "/san-pham" },
+    { label: "Nội thất liền kề", href: "/san-pham" },
+    { label: "Nội thất nhà dân", href: "/san-pham" },
+    { label: "Xem báo giá tham khảo", href: "/bao-gia" },
+  ],
+  "Về Minh Đức AIC": [
+    { label: "Về chúng tôi", href: "/ve-chung-toi" },
+    { label: "Quy trình làm việc", href: "/quy-trinh" },
+    { label: "Liên hệ", href: "/lien-he" },
+  ],
+  "Chính sách": [
+    { label: "Chính sách thanh toán", href: "/chinh-sach/thanh-toan" },
+    { label: "Chính sách bảo hành", href: "/chinh-sach/bao-hanh" },
+    { label: "Chính sách khuyến mãi", href: "/chinh-sach/khuyen-mai" },
+  ],
 };
 
 export default function Footer() {
@@ -21,9 +36,14 @@ export default function Footer() {
               </div>
               <span className="font-semibold text-white">Minh Đức AIC</span>
             </div>
-            <p className="text-amber-100/70 text-sm leading-relaxed">
+            <p className="text-amber-100/70 text-sm leading-relaxed mb-3">
               Thiết kế &amp; thi công nội thất trọn gói — giá minh bạch, bảo hành 24 tháng.
             </p>
+            <p className="text-amber-100/70 text-sm">
+              Hotline/Zalo: <a href="tel:0364223886" className="hover:text-white">0364 223 886</a>
+            </p>
+            <p className="text-amber-100/70 text-sm">minhducaiccompany@gmail.com</p>
+            <p className="text-amber-100/70 text-sm">Sun Urban City &amp; khu vực Hà Nam</p>
           </div>
 
           {/* Links */}
@@ -32,8 +52,10 @@ export default function Footer() {
               <h4 className="text-white font-semibold text-sm mb-4">{title}</h4>
               <ul className="space-y-2.5">
                 {links.map((link) => (
-                  <li key={link}>
-                    <span className="text-amber-100/70 text-sm">{link}</span>
+                  <li key={link.href + link.label}>
+                    <Link href={link.href} className="text-amber-100/70 text-sm hover:text-white transition-colors">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
