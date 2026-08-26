@@ -1,0 +1,731 @@
+<title>Nội Thất Minh Bạch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F2EEE5;
+    --surface: #FBF9F4;
+    --surface-2: #EAE4D6;
+    --ink: #2A2823;
+    --ink-soft: #5B5748;
+    --line: #C9C0AC;
+    --line-strong: #A79E88;
+    --accent: #2F4B3C;
+    --accent-ink: #F2EEE5;
+    --accent-soft: #DCE5DD;
+    --wood: #9C6B3F;
+    --wood-ink: #FBF9F4;
+    --danger: #8A3B2B;
+    --shadow: 0 1px 0 rgba(42,40,35,0.06);
+    --radius: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1C1A16;
+      --surface: #23211C;
+      --surface-2: #2D2A23;
+      --ink: #EDE8DC;
+      --ink-soft: #B7AF9C;
+      --line: #47433899;
+      --line-strong: #5C564A;
+      --accent: #7FAE93;
+      --accent-ink: #14201A;
+      --accent-soft: #263A30;
+      --wood: #D3A06C;
+      --wood-ink: #241708;
+      --danger: #D98B76;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1C1A16;
+    --surface: #23211C;
+    --surface-2: #2D2A23;
+    --ink: #EDE8DC;
+    --ink-soft: #B7AF9C;
+    --line: #47433899;
+    --line-strong: #5C564A;
+    --accent: #7FAE93;
+    --accent-ink: #14201A;
+    --accent-soft: #263A30;
+    --wood: #D3A06C;
+    --wood-ink: #241708;
+    --danger: #D98B76;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; text-wrap: balance; color: var(--ink); }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .prose-w { max-width: 62ch; }
+
+  a { color: inherit; }
+
+  .tick-rule {
+    position: relative;
+    height: 1px;
+    background: var(--line);
+    margin: 0;
+  }
+  .tick-rule::before, .tick-rule::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    width: 1px;
+    height: 9px;
+    background: var(--line-strong);
+  }
+  .tick-rule::before { left: 0; }
+  .tick-rule::after { right: 0; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 16px;
+  }
+  .brand {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .brand span { color: var(--accent); }
+  .brand small {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .topbar-cta {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--wood); color: var(--wood-ink); }
+  .btn-primary:hover { filter: brightness(1.06); }
+  .btn-outline { background: transparent; border-color: var(--line-strong); color: var(--ink); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-ghost {
+    background: transparent; color: var(--accent); border: 1px solid var(--accent-soft);
+    font-size: 13.5px; padding: 9px 14px;
+  }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn-sm { padding: 9px 16px; font-size: 13.5px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 64px 0 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 4.4vw, 50px);
+    line-height: 1.12;
+    font-weight: 600;
+    margin: 18px 0 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lede { font-size: 18px; color: var(--ink-soft); margin-bottom: 28px; max-width: 46ch; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+  .hero-note { font-size: 13.5px; color: var(--ink-soft); }
+  .hero-note strong { color: var(--ink); }
+
+  .blueprint {
+    aspect-ratio: 4/5;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    position: relative;
+    padding: 18px;
+  }
+  .blueprint svg { width: 100%; height: 100%; display: block; }
+  .blueprint-cap {
+    position: absolute; left: 18px; right: 18px; bottom: 14px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+    letter-spacing: 0.05em; color: var(--ink-soft); text-transform: uppercase;
+  }
+
+  /* ---------- Section shell ---------- */
+  section { padding: 58px 0; }
+  .section-head { margin-bottom: 34px; max-width: 62ch; }
+  .section-head h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 600; margin: 12px 0 10px; }
+  .section-head p { color: var(--ink-soft); font-size: 16px; }
+
+  /* ---------- Problem ---------- */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .problem-card {
+    background: var(--surface);
+    padding: 26px 22px;
+  }
+  .problem-card .num { font-family: "JetBrains Mono", monospace; color: var(--line-strong); font-size: 13px; }
+  .problem-card p { margin-top: 10px; font-size: 15.5px; }
+  .problem-card p.q { font-family: "Fraunces", serif; font-size: 17px; font-weight: 500; color: var(--ink); }
+
+  .agitate {
+    margin-top: 28px;
+    border-left: 2px solid var(--danger);
+    padding: 4px 0 4px 20px;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 62ch;
+  }
+  .agitate strong { color: var(--ink); }
+
+  /* ---------- Solution ---------- */
+  .solution-band { background: var(--accent); color: var(--accent-ink); }
+  .solution-band .eyebrow, .solution-band .eyebrow::before { color: var(--accent-ink); opacity: 0.75; }
+  .solution-band .section-head h2 { color: var(--accent-ink); }
+  .solution-band .section-head p { color: var(--accent-ink); opacity: 0.82; }
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .solution-card {
+    border: 1px solid color-mix(in srgb, var(--accent-ink) 25%, transparent);
+    padding: 24px 20px;
+  }
+  .solution-card .num { font-family: "JetBrains Mono", monospace; font-size: 12.5px; opacity: 0.7; }
+  .solution-card h3 { font-size: 18px; margin: 10px 0 8px; color: var(--accent-ink); }
+  .solution-card p { font-size: 14.5px; opacity: 0.88; }
+
+  /* Warranty timeline */
+  .timeline-wrap { margin-top: 40px; }
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px solid var(--accent-ink);
+  }
+  .timeline > div { padding-top: 12px; position: relative; }
+  .timeline > div::before {
+    content: ""; position: absolute; top: -2px; left: 0; width: 1px; height: 10px; background: var(--accent-ink);
+  }
+  .timeline > div:last-child::after {
+    content: ""; position: absolute; top: -2px; right: 0; width: 1px; height: 10px; background: var(--accent-ink);
+  }
+  .timeline .m { font-family: "JetBrains Mono", monospace; font-size: 12.5px; opacity: 0.75; }
+  .timeline .who { font-family: "Fraunces", serif; font-size: 17px; margin-top: 4px; }
+  .timeline .what { font-size: 13.5px; opacity: 0.82; margin-top: 4px; max-width: 34ch; }
+
+  /* ---------- Proof ---------- */
+  .proof-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; }
+  .clause-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 24px;
+  }
+  .clause-card .tag {
+    font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-soft); border: 1px solid var(--line-strong);
+    display: inline-block; padding: 3px 8px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .clause-card .clause { font-family: "Fraunces", serif; font-size: 20px; line-height: 1.4; }
+  .clause-card .clause .val { color: var(--accent); font-weight: 600; }
+  .clause-card .src { margin-top: 14px; font-size: 13px; color: var(--ink-soft); }
+
+  .swatch-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 18px; }
+  .swatch { background: var(--surface); padding: 16px 14px; }
+  .swatch .dot { width: 22px; height: 22px; border-radius: 50%; margin-bottom: 10px; }
+  .swatch p { font-size: 13px; color: var(--ink-soft); }
+
+  .proof-note {
+    font-size: 13.5px; color: var(--ink-soft); margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line-strong);
+  }
+
+  /* ---------- Pricing ---------- */
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .price-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 28px 26px;
+    position: relative;
+  }
+  .price-card.featured { border-color: var(--accent); }
+  .price-card.featured::before {
+    content: "PHỔ BIẾN NHẤT";
+    position: absolute; top: -1px; right: -1px;
+    background: var(--accent); color: var(--accent-ink);
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.06em;
+    padding: 5px 10px;
+  }
+  .price-card h3 { font-size: 19px; margin-bottom: 4px; }
+  .price-card .range {
+    font-family: "JetBrains Mono", monospace; font-size: 28px; font-weight: 600; color: var(--accent);
+    margin: 14px 0 4px;
+  }
+  .price-card .unit { font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; }
+  .price-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+  .price-card li { font-size: 14.5px; padding-left: 18px; position: relative; color: var(--ink-soft); }
+  .price-card li::before { content: "—"; position: absolute; left: 0; color: var(--line-strong); }
+  .price-foot { margin-top: 22px; font-size: 13px; color: var(--ink-soft); max-width: 62ch; }
+
+  /* ---------- Process ---------- */
+  .process-list { display: grid; gap: 0; }
+  .process-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 22px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .process-row:last-child { border-bottom: 1px solid var(--line); }
+  .process-row .step-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+  .process-row h3 { font-size: 18px; margin-bottom: 6px; }
+  .process-row p { color: var(--ink-soft); font-size: 15px; max-width: 60ch; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { border-top: 1px solid var(--line); }
+  details.faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  details.faq-item summary {
+    cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between;
+    font-family: "Fraunces", serif; font-size: 17px; font-weight: 500; gap: 16px;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary .plus {
+    font-family: "JetBrains Mono", monospace; color: var(--accent); font-size: 18px; flex: none;
+    transition: transform 0.15s ease;
+  }
+  details.faq-item[open] summary .plus { transform: rotate(45deg); }
+  details.faq-item .a { margin-top: 12px; color: var(--ink-soft); font-size: 15.5px; max-width: 66ch; }
+  details.faq-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+  /* ---------- CTA / form ---------- */
+  .cta-band { background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .cta-copy h2 { font-size: clamp(24px, 3vw, 30px); margin: 12px 0 14px; }
+  .cta-copy p { color: var(--ink-soft); max-width: 46ch; margin-bottom: 22px; }
+  .direct-contacts { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+  .direct-contacts .btn { justify-content: flex-start; width: fit-content; }
+
+  .form-card { background: var(--surface); border: 1px solid var(--line); padding: 28px; }
+  .form-card h3 { font-size: 18px; margin-bottom: 4px; }
+  .form-card .sub { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 20px; }
+  .field { margin-bottom: 16px; }
+  .field label {
+    display: block; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--ink-soft); margin-bottom: 6px; font-family: "JetBrains Mono", monospace;
+  }
+  .field input, .field select {
+    width: 100%; padding: 11px 12px; border: 1px solid var(--line-strong); background: var(--bg);
+    color: var(--ink); border-radius: var(--radius); font-family: inherit; font-size: 15px;
+  }
+  .field input:focus, .field select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .form-card .btn { width: 100%; }
+  .form-status { margin-top: 14px; font-size: 13.5px; }
+  .form-status.ok { color: var(--accent); }
+  .form-fallback { margin-top: 16px; font-size: 12.5px; color: var(--ink-soft); border-top: 1px dashed var(--line-strong); padding-top: 12px; }
+
+  /* ---------- Footer ---------- */
+  footer { padding: 34px 0 44px; }
+  .footer-grid { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+  footer .brand { margin-bottom: 6px; }
+  footer .addr { font-size: 13.5px; color: var(--ink-soft); max-width: 40ch; }
+  footer .legal { font-size: 12px; color: var(--ink-soft); font-family: "JetBrains Mono", monospace; }
+
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+    .blueprint { max-width: 340px; margin: 0 auto; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .solution-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .price-grid { grid-template-columns: 1fr; }
+    .cta-grid { grid-template-columns: 1fr; }
+    .process-row { grid-template-columns: 40px 1fr; }
+    .topbar-cta .btn span.full { display: none; }
+  }
+</style>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">Nội Thất <span>Minh Bạch</span><small>Minh Đức AIC · Hà Nam</small></div>
+    <div class="topbar-cta">
+      <a class="btn btn-outline btn-sm" href="https://zalo.me/0900000000">Zalo</a>
+      <a class="btn btn-primary btn-sm" href="tel:0900000000"><span class="full">Gọi</span> 0900&nbsp;000&nbsp;000</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Dành cho cư dân River Silk City · Sun Urban City · Green Pearl</div>
+      <h1>Báo giá đúng <em>ngay từ đầu</em>.<br>Không phát sinh giữa chừng.</h1>
+      <p class="lede">Đơn vị thiết kế – thi công nội thất tại chỗ ở Hà Nam. Báo giá chi tiết từng hạng mục, hợp đồng ghi rõ mức phí phát sinh tối đa, bảo hành 24 tháng minh bạch — không phải lời hứa marketing của một chuỗi ở xa.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#dang-ky">Nhận báo giá minh bạch trong 48h</a>
+        <a class="btn btn-outline" href="#bao-gia">Xem bảng giá mẫu</a>
+      </div>
+      <p class="hero-note"><strong>Khảo sát tại nhà miễn phí.</strong> Không thu phí trước khi có báo giá bằng văn bản.</p>
+    </div>
+    <div class="blueprint" aria-hidden="true">
+      <svg viewBox="0 0 300 340" fill="none">
+        <rect x="20" y="20" width="260" height="300" stroke="var(--line-strong)" stroke-width="1"/>
+        <line x1="20" y1="140" x2="280" y2="140" stroke="var(--line)" stroke-width="1"/>
+        <line x1="150" y1="140" x2="150" y2="320" stroke="var(--line)" stroke-width="1"/>
+        <line x1="20" y1="230" x2="150" y2="230" stroke="var(--line)" stroke-width="1"/>
+        <rect x="60" y="60" width="60" height="34" stroke="var(--accent)" stroke-width="1.4"/>
+        <line x1="20" y1="10" x2="280" y2="10" stroke="var(--line-strong)" stroke-width="1"/>
+        <line x1="20" y1="6" x2="20" y2="14" stroke="var(--line-strong)" stroke-width="1"/>
+        <line x1="280" y1="6" x2="280" y2="14" stroke="var(--line-strong)" stroke-width="1"/>
+        <text x="150" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="var(--ink-soft)">7.400</text>
+        <line x1="8" y1="20" x2="8" y2="320" stroke="var(--line-strong)" stroke-width="1"/>
+        <line x1="4" y1="20" x2="12" y2="20" stroke="var(--line-strong)" stroke-width="1"/>
+        <line x1="4" y1="320" x2="12" y2="320" stroke="var(--line-strong)" stroke-width="1"/>
+        <text x="-170" y="4" transform="rotate(-90)" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="var(--ink-soft)">8.200</text>
+      </svg>
+      <div class="blueprint-cap"><span>Bản vẽ mặt bằng</span><span>Tỷ lệ 1:80</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tick-rule wrap"></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Vấn đề thường gặp</div>
+      <h2>Bạn đã từng nghe những chuyện này chưa?</h2>
+      <p>Đây không phải nỗi lo của riêng ai — mà là điều gần như mọi gia đình chuẩn bị nhận nhà ở Hà Nam đều từng nghe từ người quen.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">01</div>
+        <p class="q">"Báo giá một đằng, thi công phát sinh một nẻo"</p>
+        <p>Nhận báo giá tổng, không kèm bản vẽ hay hạng mục chi tiết — đến lúc thi công mới biết còn thiếu nhiều khoản.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">02</div>
+        <p class="q">"Đội thợ biến mất giữa chừng"</p>
+        <p>Chậm tiến độ vì thiếu vật tư, thiếu nhân công — không ai chịu trách nhiệm rõ ràng bằng văn bản.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">03</div>
+        <p class="q">"Bàn giao xong, lỗi thì tự chịu"</p>
+        <p>Không có cam kết bảo hành rõ ràng — hoặc bảo hành "miệng" mà không biết ai đứng ra chịu trách nhiệm.</p>
+      </div>
+    </div>
+    <p class="agitate">Hậu quả thực tế: chi phí phát sinh trung bình đội lên đáng kể so với báo giá ban đầu, thời gian dọn vào ở kéo dài thêm nhiều tuần — và <strong>phần lớn tranh chấp này không nằm ở việc thuê đơn vị nhỏ hay lớn</strong>, mà ở việc có cam kết bằng văn bản hay không.</p>
+  </div>
+</section>
+
+<div class="solution-band">
+  <div class="wrap" style="padding: 58px 0;">
+    <div class="section-head">
+      <div class="eyebrow">Cam kết của chúng tôi</div>
+      <h2>3 điều chúng tôi ghi rõ trong hợp đồng — không phải trong quảng cáo</h2>
+      <p>Không hứa những gì không đo lường được. Mỗi cam kết dưới đây đều có điều khoản tương ứng trong hợp đồng ký với khách hàng.</p>
+    </div>
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="num">Cam kết 01</div>
+        <h3>Báo giá theo từng hạng mục</h3>
+        <p>Không có "báo giá tổng". Mỗi hạng mục — vật liệu, thi công, phụ kiện — được liệt kê riêng, có bản vẽ kèm theo.</p>
+      </div>
+      <div class="solution-card">
+        <div class="num">Cam kết 02</div>
+        <h3>Mức phí phát sinh tối đa</h3>
+        <p>Hợp đồng ghi rõ trần chi phí phát sinh cho phép — vượt mức này, chúng tôi chịu trách nhiệm, không phải khách hàng.</p>
+      </div>
+      <div class="solution-card">
+        <div class="num">Cam kết 03</div>
+        <h3>Bảo hành 24 tháng, 2 giai đoạn rõ ràng</h3>
+        <p>Không phải lời hứa mơ hồ — mà là ranh giới trách nhiệm cụ thể theo từng giai đoạn, xem chi tiết bên dưới.</p>
+      </div>
+    </div>
+
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div>
+          <div class="m">Tháng 00 – 12</div>
+          <div class="who">Minh Khôi bảo hành</div>
+          <div class="what">Chịu trách nhiệm lỗi vật liệu, sản phẩm cung ứng — giai đoạn dễ phát sinh lỗi nhất.</div>
+        </div>
+        <div>
+          <div class="m">Tháng 12 – 24</div>
+          <div class="who">Minh Đức AIC bảo hành</div>
+          <div class="what">Chịu trách nhiệm lỗi thi công, lắp đặt — có mặt tại chỗ để xử lý khi cần.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Minh bạch là gì, cụ thể</div>
+      <h2>Không phải quảng cáo suông — đây là những gì bạn nhận được bằng văn bản</h2>
+      <p>Chúng tôi tin rằng niềm tin đến từ những gì có thể kiểm chứng được, không phải từ khẩu hiệu.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="clause-card">
+        <span class="tag">Trích điều khoản hợp đồng mẫu</span>
+        <p class="clause">"Mức phí phát sinh ngoài hạng mục đã ký không vượt quá <span class="val">5%</span> tổng giá trị hợp đồng, trừ trường hợp khách hàng chủ động thay đổi thiết kế."</p>
+        <p class="src">— Điều khoản chi phí phát sinh, Hợp đồng thi công nội thất trọn gói</p>
+      </div>
+      <div>
+        <div class="swatch-row">
+          <div class="swatch"><div class="dot" style="background:var(--wood)"></div><p>Vật liệu — ghi rõ chủng loại, nguồn gốc trong báo giá</p></div>
+          <div class="swatch"><div class="dot" style="background:var(--accent)"></div><p>Tiến độ — mốc nghiệm thu có biên bản từng giai đoạn</p></div>
+          <div class="swatch"><div class="dot" style="background:var(--ink-soft)"></div><p>Bảo hành — 24 tháng, trách nhiệm 2 giai đoạn rõ ràng</p></div>
+        </div>
+        <p class="proof-note">Chúng tôi đang cập nhật thư viện ảnh công trình thực tế tại Hà Nam. Cách nhanh nhất để xem chất lượng thi công thật: đặt lịch khảo sát — đội ngũ mang theo mẫu vật liệu và hồ sơ hạng mục để bạn kiểm tra trực tiếp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tick-rule wrap"></div>
+
+<section id="bao-gia">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Báo giá mẫu công khai</div>
+      <h2>Ước tính trước, không cần chờ liên hệ mới biết giá</h2>
+      <p>Đơn giá tham khảo theo m² sàn thi công, đã bao gồm vật liệu và nhân công. Báo giá chính thức có thể thay đổi theo diện tích và hạng mục thực tế, luôn có bản chi tiết kèm hợp đồng.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Gói Tiêu chuẩn</h3>
+        <div class="range mono">5–8</div>
+        <div class="unit">triệu đồng / m²</div>
+        <ul>
+          <li>Gỗ công nghiệp phủ Melamine/Laminate An Cường</li>
+          <li>Sơn nước, trần thạch cao phổ thông</li>
+          <li>Đèn LED âm trần cơ bản</li>
+          <li>Phù hợp nhà liền kề, diện tích vừa</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <h3>Gói Cao cấp</h3>
+        <div class="range mono">8–12</div>
+        <div class="unit">triệu đồng / m²</div>
+        <ul>
+          <li>Gỗ tự nhiên/veneer cao cấp, đá nhân tạo mặt bếp</li>
+          <li>Thiết kế nội thất theo yêu cầu riêng</li>
+          <li>Hệ thống chiếu sáng, ổ cắm bố trí tối ưu</li>
+          <li>Phù hợp biệt thự, nhà liền kề diện tích lớn</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-foot">Khung giá tham khảo theo mặt bằng thị trường Hà Nam 2026. Đăng ký khảo sát để nhận báo giá chính xác theo diện tích và hạng mục căn nhà của bạn.</p>
+  </div>
+</section>
+
+<section style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quy trình làm việc</div>
+      <h2>4 bước, mỗi bước đều có văn bản xác nhận</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-row">
+        <div class="step-num mono">01</div>
+        <div><h3>Khảo sát tại nhà — miễn phí</h3><p>Đội ngũ đến đo đạc thực tế, tư vấn phong cách và vật liệu phù hợp ngân sách.</p></div>
+      </div>
+      <div class="process-row">
+        <div class="step-num mono">02</div>
+        <div><h3>Báo giá chi tiết trong 48 giờ</h3><p>Nhận bản vẽ kèm báo giá theo từng hạng mục — không có khoản nào "tính sau".</p></div>
+      </div>
+      <div class="process-row">
+        <div class="step-num mono">03</div>
+        <div><h3>Ký hợp đồng có điều khoản rõ ràng</h3><p>Ghi rõ tiến độ, mức phí phát sinh tối đa, và điều khoản xử lý nếu chậm tiến độ.</p></div>
+      </div>
+      <div class="process-row">
+        <div class="step-num mono">04</div>
+        <div><h3>Thi công — nghiệm thu theo mốc — bàn giao</h3><p>Mỗi giai đoạn có biên bản nghiệm thu. Bàn giao kèm bảo hành 24 tháng đã cam kết.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Câu hỏi thường gặp</div>
+      <h2>Những điều khách hàng luôn hỏi trước khi ký hợp đồng</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Giá thi công trọn gói bao nhiêu/m²? Có phát sinh gì thêm không?<span class="plus">+</span></summary>
+        <div class="a">Từ 5–8 triệu/m² (gói Tiêu chuẩn) đến 8–12 triệu/m² (gói Cao cấp), tùy hạng mục. Mức phí phát sinh tối đa được ghi rõ trong hợp đồng — vượt mức đó, chúng tôi chịu trách nhiệm.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Vật liệu có đúng như trong báo giá không?<span class="plus">+</span></summary>
+        <div class="a">Mỗi hạng mục vật liệu được ghi rõ chủng loại, thương hiệu (ví dụ gỗ An Cường) trong báo giá và hợp đồng — bạn có thể đối chiếu trực tiếp khi nghiệm thu.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Thời gian thi công bao lâu? Nếu chậm tiến độ thì sao?<span class="plus">+</span></summary>
+        <div class="a">Thời gian cụ thể phụ thuộc diện tích và hạng mục, được ghi trong hợp đồng kèm điều khoản xử lý nếu chậm tiến độ — không để bạn tự chịu rủi ro một mình.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Bảo hành bao lâu? Ai chịu trách nhiệm nếu có lỗi?<span class="plus">+</span></summary>
+        <div class="a">Tổng 24 tháng: 12 tháng đầu do đối tác cung ứng Minh Khôi bảo hành (lỗi vật liệu/sản phẩm), 12 tháng tiếp theo do Minh Đức AIC trực tiếp bảo hành (lỗi thi công/lắp đặt). Ranh giới trách nhiệm được ghi rõ trong hợp đồng.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Tôi có thể xem công trình thực tế trước khi quyết định không?<span class="plus">+</span></summary>
+        <div class="a">Có. Khi đặt lịch khảo sát, đội ngũ sẽ mang theo mẫu vật liệu thực tế và hồ sơ hạng mục các công trình đã/đang thi công tại Hà Nam để bạn kiểm tra trực tiếp.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band" id="dang-ky">
+  <div class="wrap" style="padding: 58px 0;">
+    <div class="cta-grid">
+      <div class="cta-copy">
+        <div class="eyebrow">Bắt đầu từ đây</div>
+        <h2>Nhận khảo sát &amp; báo giá minh bạch — miễn phí</h2>
+        <p>Dành cho 15 khách hàng đầu tiên tại River Silk City, Sun Urban City và Green Pearl. Đội ngũ khảo sát tại nhà, gửi báo giá chi tiết trong 48 giờ, không thu phí trước.</p>
+        <div class="direct-contacts">
+          <a class="btn btn-outline" href="tel:0900000000">📞 Gọi ngay: 0900 000 000</a>
+          <a class="btn btn-outline" href="https://zalo.me/0900000000">💬 Chat Zalo trực tiếp</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Để lại thông tin, chúng tôi gọi lại trong ngày</h3>
+        <p class="sub">Chỉ mất 30 giây — không yêu cầu thanh toán hay đặt cọc.</p>
+        <form id="lead-form">
+          <div class="field">
+            <label for="f-name">Họ và tên</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="f-phone">Số điện thoại / Zalo</label>
+            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" />
+          </div>
+          <div class="field">
+            <label for="f-project">Dự án / khu vực đang ở</label>
+            <select id="f-project" name="project" required>
+              <option value="" disabled selected>Chọn dự án</option>
+              <option>River Silk City</option>
+              <option>Sun Urban City</option>
+              <option>Green Pearl</option>
+              <option>Khác tại Phủ Lý / Hà Nam</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Gửi, nhận báo giá minh bạch</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+        <p class="form-fallback">Gửi form sẽ mở sẵn email/tin nhắn với thông tin bạn vừa nhập. Nếu muốn phản hồi nhanh nhất, hãy gọi hoặc chat Zalo trực tiếp ở trên.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand">Nội Thất <span>Minh Bạch</span></div>
+      <p class="addr">Minh Đức AIC — Thiết kế &amp; thi công nội thất tại Hà Nam.<br>Phục vụ khu vực TP. Phủ Lý và vùng lân cận.</p>
+    </div>
+    <p class="legal">HOTLINE 0900&nbsp;000&nbsp;000 · ZALO/0900000000</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('lead-form');
+    var status = document.getElementById('form-status');
+    var HOTLINE_EMAIL = 'lienhe@minhducaic.example';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('f-name').value.trim();
+      var phone = document.getElementById('f-phone').value.trim();
+      var project = document.getElementById('f-project').value;
+
+      if (!name || !phone || !project) {
+        status.textContent = 'Vui lòng điền đủ thông tin trước khi gửi.';
+        status.className = 'form-status';
+        return;
+      }
+
+      var subject = 'Đăng ký khảo sát & báo giá minh bạch — ' + name;
+      var body = 'Họ tên: ' + name + '\nSĐT/Zalo: ' + phone + '\nDự án/khu vực: ' + project;
+      var href = 'mailto:' + HOTLINE_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+      status.textContent = 'Đã chuẩn bị thông tin — đang mở ứng dụng email của bạn để gửi. Nếu không tự mở, hãy gọi/Zalo trực tiếp ở trên.';
+      status.className = 'form-status ok';
+      window.location.href = href;
+    });
+  })();
+</script>
