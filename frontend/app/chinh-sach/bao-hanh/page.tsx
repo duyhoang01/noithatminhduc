@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, Phone } from "lucide-react";
+import { Check } from "lucide-react";
 import PageHeader from "../../components/PageHeader";
 
 export default function BaoHanhPage() {
@@ -54,8 +54,9 @@ export default function BaoHanhPage() {
         </section>
 
         <div className="rounded-2xl bg-[#F3EFE7] border border-amber-100 p-6 flex items-center gap-4">
-          <div className="w-11 h-11 rounded-xl bg-[#a67c3d] flex items-center justify-center flex-shrink-0">
-            <Phone size={20} className="text-white" />
+          <div className="w-11 h-11 rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon/phone.png" alt="" className="w-5 h-5 object-contain" />
           </div>
           <div>
             <div className="font-semibold text-[#241f1a]">Cần hỗ trợ bảo hành?</div>

@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 export default function LienHePage() {
@@ -16,8 +16,9 @@ export default function LienHePage() {
             href="tel:0364223886"
             className="flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-[#F3EFE7] hover:border-amber-200 transition-colors"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#a67c3d] flex items-center justify-center flex-shrink-0">
-              <Phone size={22} className="text-white" />
+            <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/icon/phone.png" alt="" className="w-6 h-6 object-contain" />
             </div>
             <div>
               <div className="text-sm text-[#6b6459]">Gọi điện</div>
@@ -31,8 +32,9 @@ export default function LienHePage() {
             rel="noopener"
             className="flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-[#F3EFE7] hover:border-amber-200 transition-colors"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#a67c3d] flex items-center justify-center flex-shrink-0">
-              <MessageCircle size={22} className="text-white" />
+            <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/icon/stick_zalo.png" alt="" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <div className="text-sm text-[#6b6459]">Chat Zalo</div>

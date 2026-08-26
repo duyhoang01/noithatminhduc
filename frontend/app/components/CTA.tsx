@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function CTA() {
@@ -54,7 +54,8 @@ export default function CTA() {
                 href="tel:0364223886"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
               >
-                <Phone size={16} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/icon/phone.png" alt="" className="w-4 h-4 object-contain" />
                 Gọi tư vấn: 0364 223 886
               </a>
             </div>
