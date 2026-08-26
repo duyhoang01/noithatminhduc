@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
+import SpaceGallery from "./components/SpaceGallery";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import Stats from "./components/Stats";
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Hero />
       <AboutUs />
+      <SpaceGallery />
       <Features />
       <HowItWorks />
       <Stats />
