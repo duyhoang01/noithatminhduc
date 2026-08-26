@@ -17,12 +17,8 @@ export default function WizardHeader({ step, onStepClick }: Props) {
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div
-            className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-            style={{ background: 'linear-gradient(135deg,#8a6530,#a67c3d)' }}
-          >
-            M
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-icon.png" alt="Minh Đức AIC" className="w-7 h-7 object-contain" />
           <span className="font-semibold text-sm tracking-wide" style={{ color: '#241f1a' }}>
             MINH ĐỨC AIC
           </span>

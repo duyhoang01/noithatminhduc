@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "Trang chủ", href: "#" },
   { label: "Dịch vụ", href: "#pricing" },
   { label: "Quy trình", href: "#how-it-works" },
   { label: "Về chúng tôi", href: "#about" },
@@ -36,9 +37,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-icon.png" alt="Minh Đức AIC" className="w-9 h-9 object-contain" />
             <span className="font-semibold text-[#241f1a] text-base">
               Minh Đức AIC
             </span>

@@ -15,8 +15,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
+              <div className="w-8 h-8 rounded-lg bg-[#F3EFE7] flex items-center justify-center p-1">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo-icon.png" alt="Minh Đức AIC" className="w-full h-full object-contain" />
               </div>
               <span className="font-semibold text-white">Minh Đức AIC</span>
             </div>
