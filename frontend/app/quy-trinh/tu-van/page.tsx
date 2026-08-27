@@ -3,11 +3,11 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import PageHeader from "../../components/PageHeader";
 
 const checklist = [
-  "Phản hồi trong vòng 2 giờ làm việc qua Zalo/điện thoại",
-  "Trao đổi diện tích, loại bàn giao (thô/đồ liền tường), mục đích sử dụng và ngân sách dự kiến",
-  "Nhận báo giá sơ bộ theo m² để cân đối ngân sách (chưa phải báo giá chính xác)",
-  "Trao đổi thẳng thắn ngay nếu ngân sách hoặc điều kiện công trình chưa phù hợp — để không mất thời gian của bạn",
-  "Hẹn lịch khảo sát thực địa cụ thể trong vòng 48 giờ — hoàn toàn miễn phí",
+  "Được phản hồi trong vòng 2 giờ làm việc — không phải chờ đợi mòn mỏi",
+  "Được hỏi đúng trọng tâm: diện tích, ngân sách, mong muốn thực tế — không hỏi lan man",
+  "Có ngay khoảng giá tham khảo theo m² để tự cân đối, trước khi quyết định đi tiếp",
+  "Biết ngay, thẳng thắn nếu ngân sách hoặc điều kiện công trình chưa phù hợp — không bị dẫn dắt vô ích",
+  "Có lịch khảo sát cụ thể trong 48 giờ nếu muốn tiếp tục — hoàn toàn miễn phí",
 ];
 
 export default function TuVanPage() {
@@ -15,18 +15,19 @@ export default function TuVanPage() {
     <main className="bg-white">
       <PageHeader
         eyebrow="Quy trình — Bước 01"
-        title="Tư vấn ban đầu"
-        subtitle="Bước đầu tiên trước khi khảo sát — trao đổi để hiểu đúng nhu cầu và hẹn lịch khảo sát phù hợp."
+        title="Được lắng nghe trước khi bị chào bán"
+        subtitle="Bạn được hỏi thật, trả lời thật — trước khi chúng tôi đề xuất bất cứ điều gì."
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-24">
         <p className="text-[#6b6459] leading-relaxed mb-8">
-          Sau khi liên hệ qua Zalo, nhóm cư dân hoặc gọi điện trực tiếp, đội ngũ
-          tư vấn sẽ trao đổi nhanh với bạn để hiểu rõ căn hộ/nhà, mục đích sử
-          dụng và ngân sách dự kiến — chưa cần khảo sát tận nơi ở bước này.
-          Nếu căn hộ chưa nhận bàn giao, chúng tôi sẽ theo dõi và chủ động liên
-          hệ lại khi bạn đã có mặt bằng thật, thay vì khảo sát trên số liệu
-          phỏng đoán dễ sai lệch.
+          Bạn liên hệ qua Zalo, nhóm cư dân hoặc gọi điện trực tiếp — trong
+          vòng 2 giờ, sẽ có người lắng nghe thật về căn hộ/nhà, ngân sách và
+          mong muốn của bạn, không phải một kịch bản bán hàng dựng sẵn. Nếu
+          căn hộ chưa nhận bàn giao, bạn không cần lo bị mời khảo sát vội —
+          chúng tôi chủ động theo dõi và liên hệ lại đúng lúc bạn đã có mặt
+          bằng thật, thay vì làm bạn tốn thời gian cho số liệu phỏng đoán dễ
+          sai lệch.
         </p>
 
         <div className="rounded-2xl bg-[#F3EFE7] border border-amber-100 p-6 mb-10">

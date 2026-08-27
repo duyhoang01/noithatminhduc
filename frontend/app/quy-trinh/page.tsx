@@ -7,8 +7,8 @@ const steps = [
     href: "/quy-trinh/tu-van",
     icon: MessageCircle,
     step: "01",
-    title: "Tư vấn ban đầu",
-    desc: "Bạn kể nhu cầu, ngân sách, phong cách — chúng tôi lắng nghe trước, tư vấn sau, hẹn lịch khảo sát.",
+    title: "Được lắng nghe trước khi bị chào bán",
+    desc: "Bạn được hỏi thật, trả lời thật, và biết ngay nếu chưa phù hợp — trước khi hẹn lịch khảo sát.",
   },
   {
     href: "/quy-trinh/khao-sat",
@@ -70,7 +70,7 @@ export default function QuyTrinhPage() {
               className="group flex flex-col gap-3 p-6 rounded-2xl border border-gray-100 hover:border-amber-200 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-black text-stone-300">{s.step}</span>
+                <span className="text-3xl font-black text-stone-400">{s.step}</span>
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
                   <Icon size={18} className="text-white" />
                 </div>

@@ -11,17 +11,23 @@ const steps = [
     step: "01",
     icon: MessageCircle,
     color: "from-[#8a6530] to-[#a67c3d]",
-    title: "Tư vấn ban đầu",
-    desc: "Bạn kể cho chúng tôi nghe về ngôi nhà mình đang hình dung — diện tích, ngân sách, phong cách sống. Chúng tôi lắng nghe trước, tư vấn sau — và nói thẳng ngay nếu ngân sách hoặc điều kiện công trình chưa phù hợp, để không mất thời gian của bạn.",
+    title: "Được lắng nghe trước khi bị chào bán",
+    desc: "Bạn sẽ được hỏi thật về ngôi nhà, ngân sách và mong muốn của mình — không phải để chốt đơn cho nhanh, mà để hiểu đúng trước khi đề xuất bất cứ điều gì. Nếu ngân sách hay thời điểm chưa phù hợp, bạn sẽ biết ngay, thẳng thắn — thay vì bị dẫn qua nhiều bước chỉ để thất vọng ở cuối.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
-          Tư vấn ban đầu
+          Bạn nhận được ngay từ buổi đầu
         </div>
         <div className="space-y-2 text-xs text-[#6b6459]">
-          <div className="p-2 bg-amber-50 rounded-lg">Loại nhà: Chung cư / Liền kề / Nhà dân</div>
-          <div className="p-2 bg-amber-50 rounded-lg">Ngân sách dự kiến</div>
-          <div className="p-2 bg-amber-50 rounded-lg">Phong cách mong muốn</div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Không thúc ép, không giục chốt
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Trả lời thật, kể cả khi chưa có lợi cho chúng tôi
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Biết ngay nếu chưa phù hợp
+          </div>
         </div>
       </div>
     ),
@@ -178,7 +184,7 @@ export default function HowItWorks() {
                 {/* Text */}
                 <div className="flex-1 space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-5xl font-black text-stone-300">
+                    <span className="text-5xl font-black text-stone-400">
                       {step.step}
                     </span>
                     <div
