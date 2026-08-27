@@ -64,13 +64,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-amber-100/60 text-sm">
-            © 2026 Minh Đức AIC. Bảo lưu mọi quyền.
+        <div className="pt-8 flex flex-col gap-3">
+          <span className="text-amber-100/50 text-xs">
+            Công ty TNHH Kiến trúc Nội thất Minh Đức (thương hiệu Minh Đức AIC)
           </span>
-          <span className="text-amber-100/60 text-sm">
-            Bảo hành 24 tháng cho mọi hạng mục nội thất — chi tiết theo hợp đồng
-          </span>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-amber-100/60 text-sm">
+              © 2026 Minh Đức AIC. Bảo lưu mọi quyền.
+            </span>
+            <span className="text-amber-100/60 text-sm">
+              Bảo hành 24 tháng cho mọi hạng mục nội thất — chi tiết theo hợp đồng
+            </span>
+          </div>
         </div>
       </div>
     </footer>
