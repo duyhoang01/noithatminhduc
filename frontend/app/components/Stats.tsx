@@ -2,14 +2,14 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ShieldCheck, HandCoins, MapPin, Users } from "lucide-react";
+import { ShieldCheck, HandCoins, MapPin, PackageCheck } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const commitments = [
   { icon: ShieldCheck, label: "Bảo hành 24 tháng" },
   { icon: HandCoins, label: "Giá minh bạch — không phát sinh" },
   { icon: MapPin, label: "Khảo sát & tư vấn tận nơi" },
-  { icon: Users, label: "Chuỗi cung ứng nội thất nhiều năm kinh nghiệm" },
+  { icon: PackageCheck, label: "Vật liệu đúng cam kết, không tráo đổi" },
 ];
 
 export default function Stats() {
