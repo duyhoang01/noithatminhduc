@@ -28,8 +28,8 @@ const features = [
   {
     icon: Truck,
     color: "bg-stone-100 text-stone-700",
-    title: "Kinh nghiệm nguồn hàng gia đình",
-    desc: "Gia đình có kinh nghiệm nhiều năm trong ngành nội thất — lợi thế chuỗi cung ứng, kiểm soát chất lượng đầu vào.",
+    title: "Chuỗi cung ứng nội thất giàu kinh nghiệm",
+    desc: "Hợp tác với xưởng sản xuất nhiều năm trong ngành — lợi thế nguồn hàng, kiểm soát chất lượng đầu vào.",
   },
   {
     icon: Boxes,

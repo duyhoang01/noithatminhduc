@@ -9,7 +9,7 @@ const commitments = [
   { icon: ShieldCheck, label: "Bảo hành 24 tháng" },
   { icon: HandCoins, label: "Giá minh bạch — không phát sinh" },
   { icon: MapPin, label: "Khảo sát & tư vấn tận nơi" },
-  { icon: Users, label: "Kinh nghiệm gia đình trong ngành nội thất" },
+  { icon: Users, label: "Chuỗi cung ứng nội thất nhiều năm kinh nghiệm" },
 ];
 
 export default function Stats() {

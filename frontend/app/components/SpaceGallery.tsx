@@ -24,9 +24,9 @@ export default function SpaceGallery() {
             <span className="gradient-text">ảnh minh họa</span>
           </h2>
           <p className="text-lg text-[#6b6459] max-w-2xl mx-auto">
-            Hình ảnh không gian thực tế từ nguồn cung ứng và kinh nghiệm sản
-            xuất nội thất nhiều năm của gia đình chúng tôi — nền tảng đứng sau
-            mọi dự án Minh Đức AIC thực hiện.
+            Hình ảnh không gian thực tế từ chuỗi cung ứng và xưởng sản xuất
+            nội thất nhiều năm kinh nghiệm mà chúng tôi hợp tác — nền tảng
+            đứng sau mọi dự án Minh Đức AIC thực hiện.
           </p>
         </AnimatedSection>
 

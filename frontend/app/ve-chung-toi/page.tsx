@@ -5,8 +5,8 @@ import PageHeader from "../components/PageHeader";
 const points = [
   {
     icon: Sofa,
-    title: "Kinh nghiệm gia đình trong ngành nội thất",
-    desc: "Lợi thế nguồn hàng và chuỗi cung ứng sẵn có, kiểm soát chất lượng từ đầu vào.",
+    title: "Chuỗi cung ứng nội thất nhiều năm kinh nghiệm",
+    desc: "Hợp tác với xưởng sản xuất lâu năm, kiểm soát chất lượng chặt chẽ từ khâu vật liệu đến hoàn thiện.",
   },
   {
     icon: Handshake,
