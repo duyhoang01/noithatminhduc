@@ -4,16 +4,6 @@ import PageHeader from "../components/PageHeader";
 
 const segments = [
   {
-    name: "Căn hộ chung cư",
-    area: "Sun Urban City",
-    desc: "Nội thất trọn gói cho căn hộ đã bàn giao xây dựng — 3 tầng giá theo 2 kiểu bàn giao (thô/đồ liền tường), chọn đúng gói theo nhu cầu ở thực hay đầu tư cho thuê.",
-    tiers: [
-      { name: "Cơ bản", desc: "Gỗ MDF Thái Lan, phụ kiện Ivan — phù hợp đầu tư cho thuê" },
-      { name: "Tiêu chuẩn", desc: "Gỗ MDF An Cường, phụ kiện Hafele — lựa chọn phổ biến nhất" },
-      { name: "Cao cấp", desc: "Gỗ Sồi/Gỗ Đỏ, phụ kiện Blum — cá nhân hóa cao cho ở lâu dài" },
-    ],
-  },
-  {
     name: "Liền kề",
     area: "Sun Urban City",
     desc: "Thiết kế và thi công từ phần thô: điện, nước, sơn bả, trần thạch cao, đến nội thất trọn gói. Tính giá theo mô hình minh bạch từng hạng mục vật tư.",
@@ -24,6 +14,16 @@ const segments = [
     area: "Nam Định · Phủ Lý · Bình Lục",
     desc: "Chỉ phần nội thất và điện nhẹ (điều hòa, máy giặt, tủ lạnh) — không đụng vào phần xây dựng thô đã có sẵn.",
     tiers: null,
+  },
+  {
+    name: "Căn hộ chung cư",
+    area: "Sun Urban City",
+    desc: "Nội thất trọn gói cho căn hộ đã bàn giao xây dựng — 3 tầng giá theo 2 kiểu bàn giao (thô/đồ liền tường), chọn đúng gói theo nhu cầu ở thực hay đầu tư cho thuê.",
+    tiers: [
+      { name: "Cơ bản", desc: "Gỗ MDF Thái Lan, phụ kiện Ivan — phù hợp đầu tư cho thuê" },
+      { name: "Tiêu chuẩn", desc: "Gỗ MDF An Cường, phụ kiện Hafele — lựa chọn phổ biến nhất" },
+      { name: "Cao cấp", desc: "Gỗ Sồi/Gỗ Đỏ, phụ kiện Blum — cá nhân hóa cao cho ở lâu dài" },
+    ],
   },
 ];
 
