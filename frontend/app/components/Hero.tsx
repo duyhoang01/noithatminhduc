@@ -127,7 +127,7 @@ export default function Hero() {
                       <div
                         key={i}
                         className={`px-3 py-2 rounded-lg text-xs font-medium cursor-pointer transition-colors ${
-                          i === 0
+                          i === 1
                             ? "bg-[#a67c3d] text-white"
                             : "text-[#6b6459] hover:bg-gray-100"
                         }`}
@@ -143,12 +143,12 @@ export default function Hero() {
                   {/* Main content */}
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="text-sm font-semibold text-[#241f1a]">
-                      Phòng khách — Sofa & Bàn
+                      Phòng ngủ — Gỗ Thái Lan (Tiêu chuẩn)
                     </div>
                     {[
-                      { name: "Sofa 3 chỗ Series L", variant: "Xám nhạt", qty: 1, price: "12,500,000" },
-                      { name: "Bàn cà phê tròn", variant: "Gỗ sồi", qty: 1, price: "3,200,000" },
-                      { name: "Kệ TV treo tường", variant: "Trắng", qty: 1, price: "5,800,000" },
+                      { name: "Giường + đầu giường", variant: "Gỗ Thái Lan", qty: 1, price: "8.681.000" },
+                      { name: "Tủ quần áo", variant: "3m² · Thái Lan", qty: 1, price: "9.500.000" },
+                      { name: "Kệ TV tích hợp bệ", variant: "2,5md · Thái Lan", qty: 1, price: "6.250.000" },
                     ].map((item, i) => (
                       <div
                         key={i}
@@ -169,7 +169,7 @@ export default function Hero() {
                     <div className="text-xs text-[#6b6459]">3 sản phẩm</div>
                     <div className="mt-auto">
                       <div className="text-xs text-[#6b6459]">Tổng tiền</div>
-                      <div className="text-base font-bold text-[#a67c3d]">21,500,000đ</div>
+                      <div className="text-base font-bold text-[#a67c3d]">24.431.000đ</div>
                     </div>
                     <button className="mt-2 w-full py-2 rounded-lg bg-[#a67c3d] text-white text-xs font-medium hover:bg-[#8a6530] transition-colors">
                       Tạo báo giá
@@ -186,7 +186,7 @@ export default function Hero() {
               className="absolute -left-8 top-1/3 bg-white rounded-xl shadow-lg border border-gray-100 px-4 py-3 hidden md:block"
             >
               <div className="text-xs text-[#6b6459]">Giá minh bạch</div>
-              <div className="text-sm font-bold text-[#241f1a]">21.5M đ</div>
+              <div className="text-sm font-bold text-[#241f1a]">24,4M đ</div>
             </motion.div>
 
             <motion.div

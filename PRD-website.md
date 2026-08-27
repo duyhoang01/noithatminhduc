@@ -125,6 +125,19 @@ Mục tiêu: chia sẻ kiến thức chuyên môn để xây uy tín ("sau 2 tu�
 3. **Màu landing page `/uu-dai-thang-9`**: để riêng sau, không sửa trong đợt này
 4. **Domain thật cho mockup Hero**: dùng placeholder trung tính (bỏ URL giả `d-furniture.vn`, thay bằng tên miền tạm hoặc ẩn thanh URL) cho đến khi có domain chính thức
 
+## 9b. Nguồn số liệu cho mockup Hero (2026-08-27)
+
+Mockup minh họa trong `Hero.tsx` (ảnh browser-chrome giả lập công cụ báo giá) trước đó dùng tên sản phẩm + giá hoàn toàn bịa ("Sofa 3 chỗ Series L" 12.500.000đ...). Đã thay bằng sản phẩm + giá thật, tính theo đúng công thức margin của công ty:
+
+- **Giá gốc**: lấy từ `04_Kinh_Doanh/bao-gia-tham-khao.html` (đơn giá tổng hợp từ 7 báo giá thật, chủ yếu Nội Thất Minh Khôi) — tier Thái Lan/MDF chống ẩm (khớp gói Tiêu chuẩn)
+- **Công thức margin**: Giá bán = Giá gốc ÷ (1 − biên gộp), biên gộp 28% cho gói Tiêu chuẩn (theo `tai-chinh.md`) → hệ số nhân 1/0.72
+- Giường + đầu giường: gốc 6.250.000đ → bán 8.681.000đ
+- Tủ quần áo (3m²): gốc 6.840.000đ → bán 9.500.000đ
+- Kệ TV tích hợp bệ (2,5md): gốc 4.500.000đ → bán 6.250.000đ
+- Tổng: 24.431.000đ
+
+Lưu ý: **giá gốc/margin là dữ liệu nội bộ, không hiển thị công khai** — trang chỉ hiển thị giá bán cuối cùng, đúng như các báo giá thật gửi khách.
+
 ## 10. Rollout
 
 1. Chốt §9 với người phụ trách
