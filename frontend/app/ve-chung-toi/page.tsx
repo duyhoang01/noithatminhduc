@@ -39,33 +39,51 @@ export default function VeChungToiPage() {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-24">
-        <div className="prose-none text-[#6b6459] leading-relaxed space-y-4 mb-8">
-          <p>
-            Minh Đức AIC bắt đầu từ một câu hỏi rất đơn giản: tại sao làm nội
-            thất trọn gói cho một căn nhà lại khó biết trước mình sẽ trả bao
-            nhiêu, cho những gì?
-          </p>
-          <p>
-            Chúng tôi vốn đã quen với xưởng gỗ, với vật liệu, với
-            cách một món đồ nội thất thật sự được làm ra. Nhưng nhìn vào thị
-            trường, chúng tôi thấy phần lớn khách hàng phải tin gần như mù
-            quáng — không biết vật liệu có đúng như cam kết không, không
-            biết giá có bị đội lên không, chỉ đến khi dọn vào ở mới biết mọi
-            thứ có ổn hay không.
-          </p>
-          <p>
-            Chúng tôi làm Minh Đức AIC để thay đổi điều đó: cho bạn xem trước
-            khi làm, cho bạn kiểm tra trong lúc làm, và chịu trách nhiệm sau
-            khi làm xong.
-          </p>
-          <p>
-            Cụ thể, chúng tôi trực tiếp lo phần thiết kế, giám sát thi công
-            và chăm sóc bạn từ đầu đến cuối. Phần sản xuất và lắp đặt được
-            thực hiện bởi xưởng đối tác nhiều năm kinh nghiệm — cách làm này
-            giúp tối ưu chi phí mà vẫn kiểm soát chặt chất lượng ở từng công
-            đoạn, và dù ai làm phần nào, người chịu trách nhiệm trước bạn
-            luôn là chúng tôi.
-          </p>
+        <div className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-8 mb-8 items-start">
+          <div className="mx-auto sm:mx-0 w-44 sm:w-full">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-amber-100">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/anh-founder/founder.jpg"
+                alt="Nguyễn Công Giang — Nhà sáng lập Minh Đức AIC"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "50% 15%" }}
+              />
+            </div>
+            <div className="text-center sm:text-left mt-3">
+              <div className="font-semibold text-[#241f1a]">Nguyễn Công Giang</div>
+              <div className="text-sm text-[#6b6459]">Nhà sáng lập</div>
+            </div>
+          </div>
+
+          <div className="prose-none text-[#6b6459] leading-relaxed space-y-4">
+            <p>
+              Minh Đức AIC bắt đầu từ một câu hỏi rất đơn giản: tại sao làm nội
+              thất trọn gói cho một căn nhà lại khó biết trước mình sẽ trả bao
+              nhiêu, cho những gì?
+            </p>
+            <p>
+              Chúng tôi vốn đã quen với xưởng gỗ, với vật liệu, với
+              cách một món đồ nội thất thật sự được làm ra. Nhưng nhìn vào thị
+              trường, chúng tôi thấy phần lớn khách hàng phải tin gần như mù
+              quáng — không biết vật liệu có đúng như cam kết không, không
+              biết giá có bị đội lên không, chỉ đến khi dọn vào ở mới biết mọi
+              thứ có ổn hay không.
+            </p>
+            <p>
+              Chúng tôi làm Minh Đức AIC để thay đổi điều đó: cho bạn xem trước
+              khi làm, cho bạn kiểm tra trong lúc làm, và chịu trách nhiệm sau
+              khi làm xong.
+            </p>
+            <p>
+              Cụ thể, chúng tôi trực tiếp lo phần thiết kế, giám sát thi công
+              và chăm sóc bạn từ đầu đến cuối. Phần sản xuất và lắp đặt được
+              thực hiện bởi xưởng đối tác nhiều năm kinh nghiệm — cách làm này
+              giúp tối ưu chi phí mà vẫn kiểm soát chặt chất lượng ở từng công
+              đoạn, và dù ai làm phần nào, người chịu trách nhiệm trước bạn
+              luôn là chúng tôi.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-16">
