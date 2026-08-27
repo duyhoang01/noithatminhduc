@@ -6,6 +6,7 @@ const checklist = [
   "Phản hồi trong vòng 2 giờ làm việc qua Zalo/điện thoại",
   "Trao đổi diện tích, loại bàn giao (thô/đồ liền tường), mục đích sử dụng và ngân sách dự kiến",
   "Nhận báo giá sơ bộ theo m² để cân đối ngân sách (chưa phải báo giá chính xác)",
+  "Trao đổi thẳng thắn ngay nếu ngân sách hoặc điều kiện công trình chưa phù hợp — để không mất thời gian của bạn",
   "Hẹn lịch khảo sát thực địa cụ thể trong vòng 48 giờ — hoàn toàn miễn phí",
 ];
 

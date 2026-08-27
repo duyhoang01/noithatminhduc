@@ -84,7 +84,7 @@ const steps = [
     icon: HardHat,
     color: "from-stone-500 to-stone-700",
     title: "Thi công & giám sát",
-    desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra. Với liền kề/nhà dân, chúng tôi đo lại hiện trạng sau khi hoàn thiện phần thô, trước khi lắp nội thất — để đảm bảo khớp đúng thực tế, không lệch so với lúc khảo sát.",
+    desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra và nhóm Zalo riêng cập nhật ảnh/video theo từng mốc — không phải chờ hỏi mới biết tiến độ. Với liền kề/nhà dân, chúng tôi đo lại hiện trạng sau khi hoàn thiện phần thô, trước khi lắp nội thất.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">

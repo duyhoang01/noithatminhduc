@@ -18,6 +18,7 @@ const mocsB = [
 
 const checklist = [
   "Với liền kề/nhà dân: đo lại hiện trạng miễn phí sau khi hoàn thiện phần thô, trước khi sản xuất nội thất",
+  "Có nhóm Zalo riêng cho công trình của bạn — nhận ảnh/video cập nhật sau mỗi mốc, không phải chờ hỏi mới biết tiến độ",
   "Được mời tham gia trực tiếp bất kỳ mốc kiểm tra nào, không chỉ nghe báo cáo lại",
   "Trễ tiến độ bất kỳ mốc nào → phạt theo hợp đồng, không phải \"cố gắng nhanh nhất có thể\" chung chung",
   "Hạng mục nghiệm thu không đạt được sửa trong 5 ngày làm việc, không phát sinh chi phí",

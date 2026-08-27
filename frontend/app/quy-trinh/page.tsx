@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight, KeyRound } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 const steps = [
@@ -48,6 +48,17 @@ export default function QuyTrinhPage() {
         title="Từ tư vấn đến bàn giao, rõ ràng từng bước"
         subtitle="Không báo giá chính xác trước khi khảo sát — mọi con số đều dựa trên đo đạc thực tế. Bấm vào từng bước để xem chi tiết và checklist."
       />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-10">
+        <div className="flex items-start gap-3 rounded-2xl bg-[#F3EFE7] border border-amber-100 p-5">
+          <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0 text-[#8a6530]">
+            <KeyRound size={18} />
+          </div>
+          <p className="text-sm text-[#6b6459] leading-relaxed">
+            <strong className="text-[#241f1a]">Mỗi bước có một "cổng xác nhận" riêng</strong> — phiếu khảo sát, biên nhận phí thiết kế, bản phối cảnh được duyệt... Không bước nào bắt đầu khi bước trước chưa được chính bạn xác nhận.
+          </p>
+        </div>
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-24 grid grid-cols-1 sm:grid-cols-2 gap-5">
         {steps.map((s) => {
