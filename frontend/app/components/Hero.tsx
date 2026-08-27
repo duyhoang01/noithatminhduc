@@ -24,7 +24,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-50 text-[#8a6530] border border-amber-100">
               <Sparkles size={12} />
-              Thiết kế & thi công nội thất trọn gói · Sun Urban City &amp; Hà Nam
+              Nội thất trọn gói cho gia đình tại Sun Urban City &amp; Hà Nam
             </span>
           </motion.div>
 
@@ -38,7 +38,7 @@ export default function Hero() {
             Nội thất{" "}
             <span className="gradient-text">Minh Bạch</span>
             <br />
-            Giá đúng ngay từ đầu
+            Nhìn thấy tận mắt, an tâm tận lòng
           </motion.h1>
 
           {/* Subtitle */}
@@ -48,9 +48,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
             className="text-lg md:text-xl text-[#6b6459] max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Minh Đức AIC thiết kế và thi công nội thất trọn gói cho căn hộ,
-            liền kề và nhà dân — khảo sát tận nơi, báo giá minh bạch, không
-            phát sinh.
+            Bạn biết rõ mình trả tiền cho điều gì — từ bản vẽ đầu tiên đến
+            ngày dọn vào ở. Không thuật ngữ khó hiểu, không con số mập mờ.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -85,9 +84,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.75, ease: "easeOut" }}
             className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[#6b6459]"
           >
-            <span>Khảo sát tận nơi trong 48h</span>
-            <span className="hidden sm:block w-px h-4 bg-gray-200" />
             <span>Báo giá minh bạch, không phát sinh</span>
+            <span className="hidden sm:block w-px h-4 bg-gray-200" />
+            <span>Khảo sát tận nơi trong 48h</span>
             <span className="hidden sm:block w-px h-4 bg-gray-200" />
             <span>Bảo hành 24 tháng</span>
           </motion.div>
