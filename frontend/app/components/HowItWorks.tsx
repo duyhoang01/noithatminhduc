@@ -91,7 +91,7 @@ const steps = [
   {
     step: "04",
     icon: HardHat,
-    color: "from-stone-500 to-stone-700",
+    color: "from-[#8a6530] to-[#a67c3d]",
     title: "Thi công & giám sát",
     desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra và nhóm Zalo riêng cập nhật ảnh/video theo từng mốc — không phải chờ hỏi mới biết tiến độ. Với liền kề/nhà dân, chúng tôi đo lại hiện trạng sau khi hoàn thiện phần thô, trước khi lắp nội thất.",
     mockup: (
