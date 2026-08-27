@@ -143,12 +143,12 @@ export default function Hero() {
                   {/* Main content */}
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="text-sm font-semibold text-[#241f1a]">
-                      Phòng ngủ — Gỗ Thái Lan (Tiêu chuẩn)
+                      Phòng ngủ Master — Gói Tiêu chuẩn
                     </div>
                     {[
-                      { name: "Giường + đầu giường", variant: "Gỗ Thái Lan", qty: 1, price: "8.681.000" },
-                      { name: "Tủ quần áo", variant: "3m² · Thái Lan", qty: 1, price: "9.500.000" },
-                      { name: "Kệ TV tích hợp bệ", variant: "2,5md · Thái Lan", qty: 1, price: "6.250.000" },
+                      { name: "Giường ngủ 1m8 x 2m", variant: "MDF chống ẩm, phủ Melamine Thái Lan", dvt: "1 bộ", price: "8.681.000" },
+                      { name: "Tủ quần áo 3 cánh", variant: "MDF chống ẩm, phủ Melamine Thái Lan · 3m²", dvt: "1 bộ", price: "9.500.000" },
+                      { name: "Kệ tivi + bệ trang trí", variant: "MDF chống ẩm, phủ Melamine Thái Lan · 2,5md", dvt: "1 bộ", price: "6.250.000" },
                     ].map((item, i) => (
                       <div
                         key={i}
@@ -156,7 +156,7 @@ export default function Hero() {
                       >
                         <div>
                           <div className="text-xs font-medium text-[#241f1a]">{item.name}</div>
-                          <div className="text-xs text-[#6b6459]">{item.variant} · SL: {item.qty}</div>
+                          <div className="text-xs text-[#6b6459]">{item.variant} · SL: {item.dvt}</div>
                         </div>
                         <span className="text-xs font-semibold text-[#a67c3d]">{item.price}đ</span>
                       </div>
@@ -166,7 +166,7 @@ export default function Hero() {
                   {/* Right panel - Quote summary */}
                   <div className="w-44 bg-gradient-to-b from-amber-50 to-orange-50 rounded-xl p-4 flex flex-col gap-2 border border-amber-100">
                     <div className="text-xs font-semibold text-[#241f1a]">Báo giá</div>
-                    <div className="text-xs text-[#6b6459]">3 sản phẩm</div>
+                    <div className="text-xs text-[#6b6459]">3 hạng mục</div>
                     <div className="mt-auto">
                       <div className="text-xs text-[#6b6459]">Tổng tiền</div>
                       <div className="text-base font-bold text-[#a67c3d]">24.431.000đ</div>
