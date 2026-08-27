@@ -24,7 +24,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-50 text-[#8a6530] border border-amber-100">
               <Sparkles size={12} />
-              Nội thất trọn gói cho gia đình tại Sun Urban City &amp; Hà Nam
+              Nội thất trọn gói, giá minh bạch — cho gia đình tại Sun Urban City &amp; Hà Nam
             </span>
           </motion.div>
 
@@ -35,8 +35,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#241f1a] leading-tight tracking-tight mb-6"
           >
-            Nội thất{" "}
-            <span className="gradient-text">Minh Bạch</span>
+            Minh Đức{" "}
+            <span className="gradient-text">AIC</span>
             <br />
             Nhìn thấy tận mắt, an tâm tận lòng
           </motion.h1>
