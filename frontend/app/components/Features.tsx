@@ -5,7 +5,7 @@ import { useRef } from "react";
 import {
   ShieldCheck,
   Ruler,
-  Truck,
+  Wallet,
   Boxes,
   ClipboardCheck,
   BadgeCheck,
@@ -26,10 +26,10 @@ const features = [
     desc: "Đội ngũ đến tận nhà đo đạc trước khi báo giá, đảm bảo thiết kế khớp đúng không gian thật.",
   },
   {
-    icon: Truck,
+    icon: Wallet,
     color: "bg-stone-100 text-stone-700",
-    title: "Chuỗi cung ứng nội thất giàu kinh nghiệm",
-    desc: "Hợp tác với xưởng sản xuất nhiều năm trong ngành — lợi thế nguồn hàng, kiểm soát chất lượng đầu vào.",
+    title: "Thanh toán theo đúng tiến độ",
+    desc: "Không thu phần lớn tiền ngay từ đầu — bạn trả theo từng giai đoạn thi công đã hoàn thành thực tế.",
   },
   {
     icon: Boxes,
@@ -63,8 +63,8 @@ export default function Features() {
             Vì sao chọn chúng tôi
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#241f1a] mb-4 leading-tight">
-            Nội thất{" "}
-            <span className="gradient-text">minh bạch từ đầu đến cuối</span>
+            Minh bạch{" "}
+            <span className="gradient-text">không chỉ ở giá</span>
           </h2>
           <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
             Minh Đức AIC đồng hành cùng bạn từ khảo sát, thiết kế đến thi công
