@@ -14,17 +14,18 @@ export default function KhaoSatPage() {
     <main className="bg-white">
       <PageHeader
         eyebrow="Quy trình — Bước 02"
-        title="Khảo sát thực địa"
-        subtitle="Chỉ thực hiện khi căn hộ/nhà đã có mặt bằng thật — đo đạc chính xác là nền tảng của một thiết kế đúng."
+        title="Ngôi nhà của bạn, không phải căn hộ mẫu"
+        subtitle="Chỉ thực hiện khi căn hộ/nhà đã có mặt bằng thật — vì một thiết kế đúng phải bắt đầu từ đúng không gian và đúng thói quen sống của gia đình bạn."
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-24">
         <p className="text-[#6b6459] leading-relaxed mb-6">
-          Đội ngũ đến tận nơi đo đạc chi tiết từng không gian, kiểm tra hiện
-          trạng điện/nước, đánh giá hướng nắng và ánh sáng. Bên cạnh đo đạc kỹ
-          thuật, chúng tôi trao đổi sâu để hiểu phong cách, màu sắc yêu thích
-          và thói quen sinh hoạt của gia đình — đây là dữ liệu đầu vào trực
-          tiếp cho bản thiết kế, không chỉ hỏi cho có.
+          Chúng tôi không mang một bản thiết kế dựng sẵn để chào bạn. Đội ngũ
+          đến tận nơi đo đạc chi tiết từng không gian, kiểm tra hiện trạng
+          điện/nước, đánh giá hướng nắng và ánh sáng — rồi trao đổi sâu để
+          hiểu phong cách, màu sắc yêu thích và thói quen sinh hoạt thật của
+          từng thành viên trong nhà. Đây là dữ liệu đầu vào trực tiếp cho bản
+          thiết kế của riêng bạn, không phải hỏi cho có.
         </p>
         <p className="text-[#6b6459] leading-relaxed mb-8">
           Cuối buổi khảo sát, ngân sách được chốt bằng một con số cụ thể (không

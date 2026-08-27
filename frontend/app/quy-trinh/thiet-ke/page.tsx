@@ -21,8 +21,8 @@ export default function ThietKePage() {
     <main className="bg-white">
       <PageHeader
         eyebrow="Quy trình — Bước 03"
-        title="Thiết kế & trình bày"
-        subtitle="Bản vẽ và phối cảnh 3D theo đúng gói đã chọn, cùng xem trực tiếp trước khi bạn quyết định ký hợp đồng thi công."
+        title="Đủ tin để ký, không phải đi quá xa để quay đầu"
+        subtitle="Bản vẽ và phối cảnh 3D theo đúng gói đã chọn, cùng xem trực tiếp — để bạn ký hợp đồng vì hiểu và tin, không phải vì tiếc công đã đi đến đây."
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-24">
@@ -35,7 +35,8 @@ export default function ThietKePage() {
         <p className="text-[#6b6459] leading-relaxed mb-6">
           Khi có bản phối cảnh 3D, chúng tôi hẹn một buổi trực tiếp (hoặc
           video call nếu bạn ở xa) để cùng xem và giải thích lý do chọn từng
-          vật liệu, bố cục — thay vì chỉ gửi file qua Zalo để bạn tự đọc.
+          vật liệu, bố cục — không phải gửi file qua Zalo để bạn tự đoán rồi
+          ký vì đã lỡ đi đến bước này.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

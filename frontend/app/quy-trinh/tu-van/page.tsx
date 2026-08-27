@@ -7,6 +7,7 @@ const checklist = [
   "Được hỏi đúng trọng tâm: diện tích, ngân sách, mong muốn thực tế — không hỏi lan man",
   "Có ngay khoảng giá tham khảo theo m² để tự cân đối, trước khi quyết định đi tiếp",
   "Biết ngay, thẳng thắn nếu ngân sách hoặc điều kiện công trình chưa phù hợp — không bị dẫn dắt vô ích",
+  "Từ chối cũng không sao — không bị gọi lại làm phiền nhiều lần",
   "Có lịch khảo sát cụ thể trong 48 giờ nếu muốn tiếp tục — hoàn toàn miễn phí",
 ];
 

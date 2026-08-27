@@ -28,6 +28,9 @@ const steps = [
           <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
             <span className="text-[#8a6530]">✓</span> Biết ngay nếu chưa phù hợp
           </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Từ chối cũng không sao, không bị gọi lại làm phiền
+          </div>
         </div>
       </div>
     ),
@@ -36,8 +39,8 @@ const steps = [
     step: "02",
     icon: Ruler,
     color: "from-[#a67c3d] to-[#c9974f]",
-    title: "Khảo sát thực địa",
-    desc: "Hẹn lịch khảo sát trong 48h — đo đạc tận nơi và chốt ngân sách bằng con số cụ thể, không còn là ước lượng.",
+    title: "Ngôi nhà của bạn, không phải căn hộ mẫu",
+    desc: "Chúng tôi đến tận nơi, đo đạc và lắng nghe thói quen sinh hoạt thật của gia đình bạn — không áp thiết kế dựng sẵn. Rời buổi khảo sát, bạn có ngân sách cụ thể, không còn phải đoán.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
@@ -61,8 +64,8 @@ const steps = [
     step: "03",
     icon: FileCheck,
     color: "from-[#8a6530] to-[#a67c3d]",
-    title: "Thiết kế 3D & báo giá",
-    desc: "Nhận phối cảnh 3D trong 5-8 ngày, cùng xem trực tiếp (hoặc video call) để bạn hiểu rõ từng lựa chọn — rồi mới nhận báo giá chi tiết, trước khi ký hợp đồng.",
+    title: "Đủ tin để ký, không phải đã đi quá xa để quay đầu",
+    desc: "Không chỉ nhận file để tự đoán — chúng tôi ngồi lại giải thích từng lựa chọn, để bạn ký hợp đồng vì thực sự hiểu và tin, không phải vì tiếc công đã đi đến đây.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="flex items-center gap-3 mb-3">
