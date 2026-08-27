@@ -46,7 +46,7 @@ export default function VeChungToiPage() {
             nhiêu, cho những gì?
           </p>
           <p>
-            Gia đình chúng tôi vốn đã quen với xưởng gỗ, với vật liệu, với
+            Chúng tôi vốn đã quen với xưởng gỗ, với vật liệu, với
             cách một món đồ nội thất thật sự được làm ra. Nhưng nhìn vào thị
             trường, chúng tôi thấy phần lớn khách hàng phải tin gần như mù
             quáng — không biết vật liệu có đúng như cam kết không, không
