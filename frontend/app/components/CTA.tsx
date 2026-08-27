@@ -31,8 +31,8 @@ export default function CTA() {
               Bắt đầu ngay hôm nay
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-              Sẵn sàng có không gian sống{" "}
-              <span className="text-amber-400">minh bạch về giá</span>?
+              Sẵn sàng để lần này{" "}
+              <span className="text-amber-400">thật sự an tâm</span>?
             </h2>
             <p className="text-amber-100/80 text-lg max-w-xl mx-auto mb-10">
               Đăng ký khảo sát miễn phí — đội ngũ tư vấn phản hồi trong 24h,

@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const footerLinks = {
   "Sản phẩm": [
-    { label: "Nội thất căn hộ chung cư", href: "/san-pham" },
     { label: "Nội thất liền kề", href: "/san-pham" },
     { label: "Nội thất nhà dân", href: "/san-pham" },
+    { label: "Nội thất căn hộ chung cư", href: "/san-pham" },
     { label: "Xem báo giá tham khảo", href: "/bao-gia" },
   ],
   "Về Minh Đức AIC": [

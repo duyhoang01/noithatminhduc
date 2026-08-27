@@ -8,12 +8,6 @@ import AnimatedSection from "./AnimatedSection";
 
 const categories = [
   {
-    name: "Căn hộ chung cư",
-    count: "Sun Urban City",
-    color: "from-[#a67c3d] to-[#c9974f]",
-    items: ["Nội thất trọn gói", "3 gói: Cơ bản / Tiêu chuẩn / Cao cấp", "Áp dụng cho căn đã bàn giao xây dựng"],
-  },
-  {
     name: "Liền kề",
     count: "Sun Urban City",
     color: "from-[#8a6530] to-[#a67c3d]",
@@ -22,8 +16,14 @@ const categories = [
   {
     name: "Nhà dân",
     count: "Nam Định · Phủ Lý · Bình Lục",
-    color: "from-stone-500 to-stone-700",
+    color: "from-[#a67c3d] to-[#c9974f]",
     items: ["Nội thất trọn gói", "Điện nhẹ (điều hòa, máy giặt, tủ lạnh)", "Không đụng xây dựng thô"],
+  },
+  {
+    name: "Căn hộ chung cư",
+    count: "Sun Urban City",
+    color: "from-[#c9974f] to-[#a67c3d]",
+    items: ["Nội thất trọn gói", "3 gói: Cơ bản / Tiêu chuẩn / Cao cấp", "Áp dụng cho căn đã bàn giao xây dựng"],
   },
 ];
 
