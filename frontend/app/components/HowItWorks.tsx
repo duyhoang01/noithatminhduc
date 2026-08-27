@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight, KeyRound } from "lucide-react";
 import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
@@ -12,7 +12,7 @@ const steps = [
     icon: MessageCircle,
     color: "from-[#8a6530] to-[#a67c3d]",
     title: "Tư vấn ban đầu",
-    desc: "Bạn kể cho chúng tôi nghe về ngôi nhà mình đang hình dung — diện tích, ngân sách, phong cách sống. Chúng tôi lắng nghe trước, tư vấn sau, không vội chốt bất cứ điều gì khi bạn chưa sẵn sàng.",
+    desc: "Bạn kể cho chúng tôi nghe về ngôi nhà mình đang hình dung — diện tích, ngân sách, phong cách sống. Chúng tôi lắng nghe trước, tư vấn sau — và nói thẳng ngay nếu ngân sách hoặc điều kiện công trình chưa phù hợp, để không mất thời gian của bạn.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
@@ -147,6 +147,15 @@ export default function HowItWorks() {
           <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
             Không báo giá chính xác trước khi khảo sát — mọi con số đều dựa
             trên đo đạc thực tế.
+          </p>
+        </AnimatedSection>
+
+        <AnimatedSection className="flex items-start gap-3 rounded-2xl bg-[#F3EFE7] border border-amber-100 p-5 mb-16 max-w-2xl mx-auto">
+          <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0 text-[#8a6530]">
+            <KeyRound size={18} />
+          </div>
+          <p className="text-sm text-[#6b6459] leading-relaxed">
+            <strong className="text-[#241f1a]">Mỗi bước có một &quot;cổng xác nhận&quot; riêng</strong> — phiếu khảo sát, biên nhận phí thiết kế, bản phối cảnh được duyệt... Không bước nào bắt đầu khi bước trước chưa được chính bạn xác nhận.
           </p>
         </AnimatedSection>
 
