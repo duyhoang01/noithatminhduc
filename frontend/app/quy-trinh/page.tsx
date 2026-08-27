@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, Ruler, FileCheck, ClipboardCheck, ArrowRight } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 const steps = [
@@ -8,7 +8,7 @@ const steps = [
     icon: MessageCircle,
     step: "01",
     title: "Tư vấn ban đầu",
-    desc: "Trao đổi nhu cầu, ngân sách sơ bộ qua Zalo/điện thoại, hẹn lịch khảo sát.",
+    desc: "Bạn kể nhu cầu, ngân sách, phong cách — chúng tôi lắng nghe trước, tư vấn sau, hẹn lịch khảo sát.",
   },
   {
     href: "/quy-trinh/khao-sat",
@@ -21,15 +21,22 @@ const steps = [
     href: "/quy-trinh/thiet-ke",
     icon: FileCheck,
     step: "03",
-    title: "Thiết kế & phối cảnh",
-    desc: "Nhận bản vẽ 2D và phối cảnh 3D theo đúng gói đã chọn trước khi ký hợp đồng.",
+    title: "Thiết kế & trình bày",
+    desc: "Nhận bản vẽ 2D và phối cảnh 3D, cùng xem trực tiếp trước khi nhận báo giá và ký hợp đồng.",
   },
   {
     href: "/quy-trinh/nghiem-thu",
-    icon: ClipboardCheck,
+    icon: HardHat,
     step: "04",
-    title: "Thi công, nghiệm thu & bảo hành",
-    desc: "Giám sát 4 mốc kiểm tra, nghiệm thu theo checklist, bàn giao thẻ bảo hành 24 tháng.",
+    title: "Thi công & giám sát",
+    desc: "Giám sát theo mốc, đo lại hiện trạng trước khi lắp nội thất (liền kề/nhà dân), nghiệm thu theo checklist.",
+  },
+  {
+    href: "/quy-trinh/sau-ban-giao",
+    icon: HeartHandshake,
+    step: "05",
+    title: "Đồng hành sau bàn giao",
+    desc: "Chủ động hỏi thăm sau khi bạn dọn vào ở, bảo hành 24 tháng, có mặt trong 48h khi cần.",
   },
 ];
 
@@ -52,7 +59,7 @@ export default function QuyTrinhPage() {
               className="group flex flex-col gap-3 p-6 rounded-2xl border border-gray-100 hover:border-amber-200 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-black text-gray-100">{s.step}</span>
+                <span className="text-3xl font-black text-stone-300">{s.step}</span>
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8a6530] to-[#a67c3d] flex items-center justify-center">
                   <Icon size={18} className="text-white" />
                 </div>

@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Ruler, FileCheck, HardHat, ArrowRight } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
@@ -11,8 +11,8 @@ const steps = [
     step: "01",
     icon: MessageCircle,
     color: "from-[#8a6530] to-[#a67c3d]",
-    title: "Tư vấn nhu cầu",
-    desc: "Trao đổi online hoặc qua điện thoại/Zalo về nhu cầu, ngân sách và phong cách mong muốn.",
+    title: "Tư vấn ban đầu",
+    desc: "Bạn kể cho chúng tôi nghe về ngôi nhà mình đang hình dung — diện tích, ngân sách, phong cách sống. Chúng tôi lắng nghe trước, tư vấn sau, không vội chốt bất cứ điều gì khi bạn chưa sẵn sàng.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
@@ -31,22 +31,22 @@ const steps = [
     icon: Ruler,
     color: "from-[#a67c3d] to-[#c9974f]",
     title: "Khảo sát thực địa",
-    desc: "Hẹn khảo sát và đo đạc tận nơi trong 48h, báo giá sơ bộ theo m² ngay tại buổi khảo sát.",
+    desc: "Hẹn lịch khảo sát trong 48h — đo đạc tận nơi và chốt ngân sách bằng con số cụ thể, không còn là ước lượng.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
-          Khảo sát trong 48h
+          Lịch khảo sát trong 48h
         </div>
         <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
           <span className="text-[#6b6459]">Đo đạc thực tế</span>
           <span className="font-medium text-[#241f1a]">✓</span>
         </div>
         <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
-          <span className="text-[#6b6459]">Chốt ngân sách sơ bộ</span>
+          <span className="text-[#6b6459]">Chốt ngân sách cụ thể</span>
           <span className="font-medium text-[#241f1a]">✓</span>
         </div>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-sm font-bold text-[#241f1a]">Báo giá sơ bộ / m²</span>
+          <span className="text-sm font-bold text-[#241f1a]">Không còn là ước lượng</span>
         </div>
       </div>
     ),
@@ -56,7 +56,7 @@ const steps = [
     icon: FileCheck,
     color: "from-[#8a6530] to-[#a67c3d]",
     title: "Thiết kế 3D & báo giá",
-    desc: "Nhận phối cảnh 3D và báo giá chi tiết trong 48h sau khảo sát, trước khi ký hợp đồng.",
+    desc: "Nhận phối cảnh 3D trong 5-8 ngày, cùng xem trực tiếp (hoặc video call) để bạn hiểu rõ từng lựa chọn — rồi mới nhận báo giá chi tiết, trước khi ký hợp đồng.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="flex items-center gap-3 mb-3">
@@ -65,9 +65,9 @@ const steps = [
           </div>
           <div>
             <div className="text-xs font-semibold text-[#241f1a]">
-              Phối cảnh 3D + Báo giá
+              Buổi trình bày phối cảnh
             </div>
-            <div className="text-xs text-[#6b6459]">Gửi trong 48h</div>
+            <div className="text-xs text-[#6b6459]">Trực tiếp hoặc video call</div>
           </div>
           <span className="ml-auto text-xs font-medium text-[#8a6530] bg-amber-50 px-2 py-0.5 rounded-full">
             Sẵn sàng
@@ -83,18 +83,43 @@ const steps = [
     step: "04",
     icon: HardHat,
     color: "from-stone-500 to-stone-700",
-    title: "Thi công & bảo hành",
-    desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra, nghiệm thu và bảo hành 24 tháng.",
+    title: "Thi công & giám sát",
+    desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra. Với liền kề/nhà dân, chúng tôi đo lại hiện trạng sau khi hoàn thiện phần thô, trước khi lắp nội thất — để đảm bảo khớp đúng thực tế, không lệch so với lúc khảo sát.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="text-xs font-semibold text-[#241f1a] mb-3">
-          4 mốc giám sát
+          4 mốc giám sát lắp đặt
         </div>
         <div className="space-y-1.5 text-xs text-[#6b6459]">
           <div>Mốc 1 · Vật liệu &amp; điện đi đúng sơ đồ</div>
           <div>Mốc 2 · Kết cấu, kích thước</div>
           <div>Mốc 3 · Bề mặt, sơn, phụ kiện</div>
           <div>Mốc 4 · Nghiệm thu 20 điểm</div>
+        </div>
+        <div className="mt-3 bg-amber-50 rounded-lg p-2 text-center text-xs font-semibold text-[#8a6530]">
+          + Đo lại hiện trạng (liền kề/nhà dân)
+        </div>
+      </div>
+    ),
+  },
+  {
+    step: "05",
+    icon: HeartHandshake,
+    color: "from-[#a67c3d] to-[#c9974f]",
+    title: "Đồng hành sau bàn giao",
+    desc: "Không kết thúc ở lúc bàn giao. Chúng tôi chủ động hỏi thăm sau 1-2 tuần bạn dọn vào ở, và có mặt trong 48h nếu phát sinh vấn đề trong suốt 24 tháng bảo hành.",
+    mockup: (
+      <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
+        <div className="text-xs font-semibold text-[#241f1a] mb-3">
+          Sau khi bạn dọn vào ở
+        </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Hỏi thăm sau 1-2 tuần</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
+        </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Có mặt trong 48h nếu cần</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
         </div>
         <div className="mt-3 bg-amber-50 rounded-lg p-2 text-center text-xs font-semibold text-[#8a6530]">
           Bảo hành 24 tháng
@@ -144,7 +169,7 @@ export default function HowItWorks() {
                 {/* Text */}
                 <div className="flex-1 space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-5xl font-black text-gray-100">
+                    <span className="text-5xl font-black text-stone-300">
                       {step.step}
                     </span>
                     <div

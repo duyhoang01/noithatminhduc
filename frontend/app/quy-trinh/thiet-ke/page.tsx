@@ -11,6 +11,7 @@ const tiers = [
 const checklist = [
   "Nhận bản vẽ 2D mặt bằng bố trí trong khoảng 3 ngày làm việc sau khảo sát",
   "Nhận phối cảnh 3D theo đúng gói đã chọn, thêm 3–5 ngày làm việc",
+  "1 buổi trình bày phối cảnh trực tiếp (hoặc video call) — không chỉ gửi file qua Zalo",
   "2 lần chỉnh sửa miễn phí theo hợp đồng",
   "Bản vẽ đóng watermark, thuộc quyền Minh Đức AIC cho đến khi ký hợp đồng thi công",
 ];
@@ -20,8 +21,8 @@ export default function ThietKePage() {
     <main className="bg-white">
       <PageHeader
         eyebrow="Quy trình — Bước 03"
-        title="Thiết kế & phối cảnh"
-        subtitle="Bản vẽ và phối cảnh 3D theo đúng gói đã chọn, gửi trước khi bạn quyết định ký hợp đồng thi công."
+        title="Thiết kế & trình bày"
+        subtitle="Bản vẽ và phối cảnh 3D theo đúng gói đã chọn, cùng xem trực tiếp trước khi bạn quyết định ký hợp đồng thi công."
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-24">
@@ -30,6 +31,11 @@ export default function ThietKePage() {
           khai bản vẽ 2D mặt bằng bố trí và phối cảnh 3D theo đúng gói bạn đã
           chọn. Toàn bộ hạng mục, màu sắc và phong cách được lấy đúng từ những
           gì bạn chia sẻ ở buổi khảo sát.
+        </p>
+        <p className="text-[#6b6459] leading-relaxed mb-6">
+          Khi có bản phối cảnh 3D, chúng tôi hẹn một buổi trực tiếp (hoặc
+          video call nếu bạn ở xa) để cùng xem và giải thích lý do chọn từng
+          vật liệu, bố cục — thay vì chỉ gửi file qua Zalo để bạn tự đọc.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -67,7 +73,7 @@ export default function ThietKePage() {
             href="/quy-trinh/nghiem-thu"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#a67c3d] hover:bg-[#8a6530] text-white text-sm font-medium transition-colors"
           >
-            Bước tiếp theo: Thi công &amp; nghiệm thu
+            Bước tiếp theo: Thi công &amp; giám sát
             <ArrowRight size={14} />
           </Link>
         </div>

@@ -57,7 +57,7 @@ export default function KhaoSatPage() {
             href="/quy-trinh/thiet-ke"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#a67c3d] hover:bg-[#8a6530] text-white text-sm font-medium transition-colors"
           >
-            Bước tiếp theo: Thiết kế &amp; phối cảnh
+            Bước tiếp theo: Thiết kế &amp; trình bày
             <ArrowRight size={14} />
           </Link>
         </div>
