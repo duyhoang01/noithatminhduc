@@ -1,27 +1,27 @@
 import Link from "next/link";
-import { ArrowRight, Sofa, Handshake, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowRight, Sofa, Handshake, Gem, ShieldCheck } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 const points = [
   {
     icon: Sofa,
-    title: "Chuỗi cung ứng nội thất nhiều năm kinh nghiệm",
-    desc: "Hợp tác với xưởng sản xuất lâu năm, kiểm soát chất lượng chặt chẽ từ khâu vật liệu đến hoàn thiện.",
+    title: "Chúng tôi biết rõ nội thất được làm ra như thế nào",
+    desc: "Nhờ hợp tác với xưởng sản xuất lâu năm, mọi vật liệu đều được kiểm tra kỹ trước khi đến tay bạn.",
   },
   {
     icon: Handshake,
-    title: "Move-in Solution Provider",
-    desc: "Không chỉ thi công — đồng hành từ khảo sát, thiết kế đến bàn giao, để bạn chỉ việc dọn vào ở.",
+    title: "Đồng hành đến khi bạn dọn vào ở",
+    desc: "Không chỉ thi công rồi bàn giao — chúng tôi lo từ khảo sát, thiết kế đến ngày bạn thật sự chuyển vào sống.",
   },
   {
-    icon: MapPin,
-    title: "Bám sát địa bàn",
-    desc: "Tập trung phục vụ Sun Urban City, Phủ Lý và khu vực Hà Nam — hiểu rõ đặc thù từng dự án.",
+    icon: Gem,
+    title: "Không chạy đua giá rẻ",
+    desc: "Chúng tôi cạnh tranh bằng việc để bạn biết rõ mình đang trả tiền cho điều gì, không phải bằng cách hạ giá.",
   },
   {
     icon: ShieldCheck,
-    title: "Định vị tin cậy, không chạy đua giá rẻ",
-    desc: "Khách hàng biết chính xác mình trả tiền cho điều gì, từ bản vẽ đầu tiên đến ngày nhận bàn giao.",
+    title: "Sai là chúng tôi nhận, không đổ lỗi",
+    desc: "Nếu công trình không đúng với thiết kế đã duyệt, chúng tôi là người chịu trách nhiệm sửa lại — không viện cớ từ xưởng hay nhà cung cấp.",
   },
 ];
 
@@ -35,22 +35,36 @@ export default function VeChungToiPage() {
             Minh Đức AIC — Kiến trúc &amp; Nội thất
           </>
         }
-        subtitle="Đơn vị thiết kế và thi công nội thất trọn gói, ra đời từ mong muốn mang lại giải pháp nội thất minh bạch về giá cho các gia đình tại Sun Urban City và khu vực Hà Nam."
+        subtitle="Nhìn thấy tận mắt, an tâm tận lòng — câu chuyện phía sau cách chúng tôi làm việc."
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-24">
-        <div className="prose-none text-[#6b6459] leading-relaxed space-y-4 mb-12">
+        <div className="prose-none text-[#6b6459] leading-relaxed space-y-4 mb-8">
           <p>
-            Minh Đức AIC hoạt động theo mô hình <strong className="text-[#241f1a]">asset-light</strong>:
-            chúng tôi trực tiếp quản lý thiết kế, giám sát thi công và chăm sóc khách hàng,
-            trong khi phần sản xuất/lắp đặt được thực hiện bởi xưởng đối tác có kinh nghiệm lâu năm.
-            Cách vận hành này giúp tối ưu chi phí mà vẫn kiểm soát chặt chất lượng ở từng công đoạn.
+            Minh Đức AIC bắt đầu từ một câu hỏi rất đơn giản: tại sao làm nội
+            thất trọn gói cho một căn nhà lại khó biết trước mình sẽ trả bao
+            nhiêu, cho những gì?
           </p>
           <p>
-            Không chạy theo cạnh tranh giá rẻ, chúng tôi định vị ở phân khúc tin cậy —
-            nơi khách hàng biết chính xác mình trả tiền cho điều gì, từ bản vẽ đầu tiên
-            đến ngày nhận bàn giao, và được bảo vệ bằng hợp đồng rõ ràng cùng chính sách
-            bảo hành 24 tháng.
+            Gia đình chúng tôi vốn đã quen với xưởng gỗ, với vật liệu, với
+            cách một món đồ nội thất thật sự được làm ra. Nhưng nhìn vào thị
+            trường, chúng tôi thấy phần lớn khách hàng phải tin gần như mù
+            quáng — không biết vật liệu có đúng như cam kết không, không
+            biết giá có bị đội lên không, chỉ đến khi dọn vào ở mới biết mọi
+            thứ có ổn hay không.
+          </p>
+          <p>
+            Chúng tôi làm Minh Đức AIC để thay đổi điều đó: cho bạn xem trước
+            khi làm, cho bạn kiểm tra trong lúc làm, và chịu trách nhiệm sau
+            khi làm xong.
+          </p>
+          <p>
+            Cụ thể, chúng tôi trực tiếp lo phần thiết kế, giám sát thi công
+            và chăm sóc bạn từ đầu đến cuối. Phần sản xuất và lắp đặt được
+            thực hiện bởi xưởng đối tác nhiều năm kinh nghiệm — cách làm này
+            giúp tối ưu chi phí mà vẫn kiểm soát chặt chất lượng ở từng công
+            đoạn, và dù ai làm phần nào, người chịu trách nhiệm trước bạn
+            luôn là chúng tôi.
           </p>
         </div>
 
