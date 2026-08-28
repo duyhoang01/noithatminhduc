@@ -1,5 +1,6 @@
 import { Mail, MapPin, Clock } from "lucide-react";
 import PageHeader from "../components/PageHeader";
+import LeadForm from "./LeadForm";
 
 export default function LienHePage() {
   return (
@@ -43,7 +44,7 @@ export default function LienHePage() {
           </a>
         </div>
 
-        <div className="space-y-4 text-[#6b6459]">
+        <div className="space-y-4 text-[#6b6459] mb-10">
           <div className="flex items-center gap-3">
             <Mail size={18} className="text-[#8a6530] flex-shrink-0" />
             <span>minhducaiccompany@gmail.com</span>
@@ -57,6 +58,8 @@ export default function LienHePage() {
             <span>Phản hồi trong 24h · Hẹn khảo sát thực địa trong 48h</span>
           </div>
         </div>
+
+        <LeadForm />
       </div>
     </main>
   );
