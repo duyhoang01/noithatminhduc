@@ -11,13 +11,13 @@ const categories = [
     name: "Liền kề",
     count: "Sun Urban City",
     color: "from-[#8a6530] to-[#a67c3d]",
-    items: ["Thiết kế + thi công điện, nước, sơn bả", "Trần thạch cao", "Nội thất trọn gói"],
+    items: ["Thiết kế + thi công điện, nước, sơn bả, trần thạch cao", "Nội thất 3 gói: Cơ bản / Tiêu chuẩn / Cao cấp", "Phần xây dựng tính theo hóa đơn vật tư thực tế"],
   },
   {
     name: "Nhà dân",
     count: "Nam Định · Phủ Lý · Bình Lục",
     color: "from-[#a67c3d] to-[#c9974f]",
-    items: ["Nội thất trọn gói", "Điện nhẹ (điều hòa, máy giặt, tủ lạnh)", "Không đụng xây dựng thô"],
+    items: ["Nội thất 3 gói: Cơ bản / Tiêu chuẩn / Cao cấp", "Điện nhẹ (điều hòa, máy giặt, tủ lạnh)", "Không đụng xây dựng thô"],
   },
   {
     name: "Căn hộ chung cư",

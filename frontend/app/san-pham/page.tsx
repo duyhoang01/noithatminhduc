@@ -7,18 +7,29 @@ const segments = [
     name: "Liền kề",
     area: "Sun Urban City",
     desc: "Thiết kế và thi công từ phần thô: điện, nước, sơn bả, trần thạch cao, đến nội thất trọn gói. Tính giá theo mô hình minh bạch từng hạng mục vật tư.",
-    tiers: null,
+    note: "Phần xây dựng (điện, nước, sơn bả, trần thạch cao) luôn tính theo đúng hóa đơn vật tư thực tế — không đổi theo gói. 3 gói dưới đây chỉ khác nhau ở phần nội thất.",
+    tiers: [
+      { name: "Cơ bản", desc: "Nội thất MDF Thái xanh, phụ kiện Hafele cơ bản — tối giản hạng mục, phù hợp hoàn thiện cho thuê" },
+      { name: "Tiêu chuẩn", desc: "Nội thất MDF Thái xanh đầy đủ hạng mục, phụ kiện Hafele — mức phổ biến nhất" },
+      { name: "Cao cấp", desc: "Nội thất An Cường, phụ kiện Blum/Hettich — cá nhân hóa cao cho ở thực lâu dài" },
+    ],
   },
   {
     name: "Nhà dân",
     area: "Nam Định · Phủ Lý · Bình Lục",
     desc: "Chỉ phần nội thất và điện nhẹ (điều hòa, máy giặt, tủ lạnh) — không đụng vào phần xây dựng thô đã có sẵn.",
-    tiers: null,
+    note: null,
+    tiers: [
+      { name: "Cơ bản", desc: "Gỗ MDF Thái Lan, phụ kiện Ivan — đủ dùng, tối ưu chi phí" },
+      { name: "Tiêu chuẩn", desc: "Gỗ MDF An Cường, phụ kiện Hafele — lựa chọn phổ biến nhất" },
+      { name: "Cao cấp", desc: "Gỗ Sồi/Gỗ Đỏ, phụ kiện Blum — cá nhân hóa cao, dùng lâu dài" },
+    ],
   },
   {
     name: "Căn hộ chung cư",
     area: "Sun Urban City",
     desc: "Nội thất trọn gói cho căn hộ đã bàn giao xây dựng — 3 tầng giá theo 2 kiểu bàn giao (thô/đồ liền tường), chọn đúng gói theo nhu cầu ở thực hay đầu tư cho thuê.",
+    note: null,
     tiers: [
       { name: "Cơ bản", desc: "Gỗ MDF Thái Lan, phụ kiện Ivan — phù hợp đầu tư cho thuê" },
       { name: "Tiêu chuẩn", desc: "Gỗ MDF An Cường, phụ kiện Hafele — lựa chọn phổ biến nhất" },
@@ -44,6 +55,12 @@ export default function SanPhamPage() {
               <span className="text-sm text-[#8a6530] font-medium">{seg.area}</span>
             </div>
             <p className="text-[#6b6459] leading-relaxed mb-5">{seg.desc}</p>
+
+            {seg.note && (
+              <p className="text-sm text-[#8a6530] bg-[#F3EFE7] rounded-lg px-4 py-2.5 mb-5 inline-block">
+                {seg.note}
+              </p>
+            )}
 
             {seg.tiers && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
