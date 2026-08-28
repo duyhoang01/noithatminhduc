@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Sản phẩm", href: "#features" },
-  { label: "Cách hoạt động", href: "#how-it-works" },
-  { label: "Báo giá", href: "#pricing" },
-  { label: "Liên hệ", href: "#contact" },
+  { label: "Trang chủ", href: "/" },
+  { label: "Sản phẩm", href: "/san-pham" },
+  { label: "Quy trình", href: "/quy-trinh" },
+  { label: "Về chúng tôi", href: "/ve-chung-toi" },
+  { label: "Liên hệ", href: "/lien-he" },
 ];
 
 export default function Navbar() {
@@ -29,53 +31,46 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm"
-          : "bg-transparent"
+          : "bg-white/70 backdrop-blur-xl"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
-            </div>
-            <span className="font-semibold text-[#0a2540] text-base">
-              MD-Furniture
+          <Link href="/" className="flex items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-icon.png" alt="Minh Đức AIC" className="w-9 h-9 object-contain" />
+            <span className="font-semibold text-[#241f1a] text-base">
+              Minh Đức AIC
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-[#425466] hover:text-[#0a2540] transition-colors font-medium"
+                className="text-sm text-[#6b6459] hover:text-[#241f1a] transition-colors font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#contact"
-              className="text-sm font-medium text-[#425466] hover:text-[#0a2540] transition-colors"
+            <Link
+              href="/lien-he"
+              className="text-sm font-medium text-white bg-[#a67c3d] hover:bg-[#8a6530] px-4 py-2 rounded-full transition-colors"
             >
-              Đăng nhập
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-white bg-[#635bff] hover:bg-[#4f46e5] px-4 py-2 rounded-full transition-colors"
-            >
-              Bắt đầu miễn phí
-            </a>
+              Nhận báo giá miễn phí
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-[#425466]"
+            className="md:hidden p-2 text-[#6b6459]"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -94,21 +89,22 @@ export default function Navbar() {
           >
             <div className="px-4 py-4 flex flex-col gap-3">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-[#425466] hover:text-[#0a2540] py-2"
+                  className="text-sm font-medium text-[#6b6459] hover:text-[#241f1a] py-2"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
-                className="text-sm font-medium text-white bg-[#635bff] hover:bg-[#4f46e5] px-4 py-2.5 rounded-full text-center transition-colors mt-2"
+              <Link
+                href="/lien-he"
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-white bg-[#a67c3d] hover:bg-[#8a6530] px-4 py-2.5 rounded-full text-center transition-colors mt-2"
               >
-                Bắt đầu miễn phí
-              </a>
+                Nhận báo giá miễn phí
+              </Link>
             </div>
           </motion.div>
         )}

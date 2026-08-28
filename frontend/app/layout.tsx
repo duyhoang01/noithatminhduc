@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import FloatingContact from "./components/FloatingContact";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -8,9 +11,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "MD-Furniture — Hệ thống Cấu hình & Báo giá Nội thất",
+  title: "Minh Đức AIC — Thiết kế & Thi công Nội thất trọn gói",
   description:
-    "MD-Furniture là hệ thống CPQ giúp đại lý nội thất cấu hình sản phẩm theo phòng, tính giá realtime và tạo báo giá chuyên nghiệp chỉ trong 5 phút.",
+    "Minh Đức AIC thiết kế và thi công nội thất trọn gói cho căn hộ, liền kề và nhà dân tại Sun Urban City, Phủ Lý, Hà Nam. Giá minh bạch, khảo sát tận nơi, bảo hành 24 tháng.",
 };
 
 export default function RootLayout({
@@ -20,7 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <Navbar />
+        {children}
+        <Footer />
+        <FloatingContact />
+      </body>
     </html>
   );
 }

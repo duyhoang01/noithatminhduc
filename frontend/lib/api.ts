@@ -56,4 +56,10 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ sessionId }),
     }),
+
+  createLead: (body: { name: string; phone: string; interest?: string }) =>
+    req<{ id: string }>('/leads', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
 };

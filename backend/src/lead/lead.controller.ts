@@ -11,7 +11,7 @@ export class LeadController {
   }
 
   @Post()
-  create(@Body() body: { name: string; phone: string }) {
-    return this.service.create(body.name, body.phone);
+  create(@Body() body: { name: string; phone: string; interest?: string }) {
+    return this.service.create(body.name, body.phone, body.interest);
   }
 }

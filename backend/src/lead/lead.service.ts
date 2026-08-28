@@ -9,7 +9,7 @@ export class LeadService {
     return this.repo.findAll();
   }
 
-  create(name: string, phone: string) {
-    return this.repo.create(name, phone);
+  create(name: string, phone: string, interest?: string) {
+    return this.repo.create(name, phone, interest);
   }
 }

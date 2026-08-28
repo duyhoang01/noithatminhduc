@@ -2,82 +2,60 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Settings, DollarSign, FileCheck } from "lucide-react";
+import { MessageCircle, Ruler, FileCheck, HardHat, HeartHandshake, ArrowRight, KeyRound } from "lucide-react";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 const steps = [
   {
     step: "01",
-    icon: Settings,
-    color: "from-indigo-500 to-purple-600",
-    bgLight: "bg-indigo-50",
-    title: "Cấu hình nội thất",
-    desc: "Chọn phòng, thêm sản phẩm và variant phù hợp. Hệ thống hỗ trợ nhiều phòng và nhiều tầng trong cùng một dự án.",
+    icon: MessageCircle,
+    color: "from-[#8a6530] to-[#a67c3d]",
+    title: "Được lắng nghe trước khi bị chào bán",
+    desc: "Bạn sẽ được hỏi thật về ngôi nhà, ngân sách và mong muốn của mình — không phải để chốt đơn cho nhanh, mà để hiểu đúng trước khi đề xuất bất cứ điều gì. Nếu ngân sách hay thời điểm chưa phù hợp, bạn sẽ biết ngay, thẳng thắn — thay vì bị dẫn qua nhiều bước chỉ để thất vọng ở cuối.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
-        <div className="text-xs font-semibold text-[#0a2540] mb-3">
-          Cấu hình phòng khách
+        <div className="text-xs font-semibold text-[#241f1a] mb-3">
+          Bạn nhận được ngay từ buổi đầu
         </div>
-        <div className="space-y-2">
-          {[
-            { name: "Sofa 3 chỗ", color: "Xám nhạt" },
-            { name: "Bàn cà phê", color: "Gỗ sồi" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3 p-2 bg-indigo-50 rounded-lg"
-            >
-              <div className="w-8 h-8 rounded-lg bg-indigo-200" />
-              <div>
-                <div className="text-xs font-medium text-[#0a2540]">
-                  {item.name}
-                </div>
-                <div className="text-xs text-[#425466]">{item.color}</div>
-              </div>
-              <span className="ml-auto text-xs text-indigo-600 font-medium">
-                ×1
-              </span>
-            </div>
-          ))}
-          <button className="w-full text-xs text-indigo-600 border border-dashed border-indigo-200 rounded-lg py-2 hover:bg-indigo-50 transition-colors">
-            + Thêm sản phẩm
-          </button>
+        <div className="space-y-2 text-xs text-[#6b6459]">
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Không thúc ép, không giục chốt
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Trả lời thật, kể cả khi chưa có lợi cho chúng tôi
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Biết ngay nếu chưa phù hợp
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+            <span className="text-[#8a6530]">✓</span> Từ chối cũng không sao, không bị gọi lại làm phiền
+          </div>
         </div>
       </div>
     ),
   },
   {
     step: "02",
-    icon: DollarSign,
-    color: "from-purple-500 to-pink-600",
-    bgLight: "bg-purple-50",
-    title: "Giá tự động tính",
-    desc: "Hệ thống pricing engine tự động tính tổng giá theo đơn giá của từng đại lý, cập nhật realtime mỗi khi bạn thay đổi.",
+    icon: Ruler,
+    color: "from-[#a67c3d] to-[#c9974f]",
+    title: "Ngôi nhà của bạn, không phải căn hộ mẫu",
+    desc: "Chúng tôi đến tận nơi, đo đạc và lắng nghe thói quen sinh hoạt thật của gia đình bạn — không áp thiết kế dựng sẵn. Rời buổi khảo sát, bạn có ngân sách cụ thể, không còn phải đoán.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
-        <div className="text-xs font-semibold text-[#0a2540] mb-3">
-          Tổng hợp giá
+        <div className="text-xs font-semibold text-[#241f1a] mb-3">
+          Lịch khảo sát trong 48h
         </div>
-        <div className="space-y-2">
-          {[
-            { name: "Sofa 3 chỗ", price: "12,500,000" },
-            { name: "Bàn cà phê", price: "3,200,000" },
-            { name: "Kệ TV", price: "5,800,000" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between text-xs py-1 border-b border-gray-50"
-            >
-              <span className="text-[#425466]">{item.name}</span>
-              <span className="font-medium text-[#0a2540]">{item.price}đ</span>
-            </div>
-          ))}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-sm font-bold text-[#0a2540]">Tổng cộng</span>
-            <span className="text-sm font-bold text-[#635bff]">
-              21,500,000đ
-            </span>
-          </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Đo đạc thực tế</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
+        </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Chốt ngân sách cụ thể</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
+        </div>
+        <div className="flex items-center justify-between pt-2">
+          <span className="text-sm font-bold text-[#241f1a]">Không còn là ước lượng</span>
         </div>
       </div>
     ),
@@ -85,33 +63,76 @@ const steps = [
   {
     step: "03",
     icon: FileCheck,
-    color: "from-blue-500 to-cyan-600",
-    bgLight: "bg-blue-50",
-    title: "Tạo & gửi báo giá",
-    desc: "Xác nhận cấu hình và tạo báo giá PDF ngay lập tức. Gửi cho khách hàng hoặc lưu trữ trong hệ thống để theo dõi.",
+    color: "from-[#8a6530] to-[#a67c3d]",
+    title: "Đủ tin để ký, không phải đã đi quá xa để quay đầu",
+    desc: "Không chỉ nhận file để tự đoán — chúng tôi ngồi lại giải thích từng lựa chọn, để bạn ký hợp đồng vì thực sự hiểu và tin, không phải vì tiếc công đã đi đến đây.",
     mockup: (
       <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-            <FileCheck size={16} className="text-blue-600" />
+          <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
+            <FileCheck size={16} className="text-[#8a6530]" />
           </div>
           <div>
-            <div className="text-xs font-semibold text-[#0a2540]">
-              BG-2024-001
+            <div className="text-xs font-semibold text-[#241f1a]">
+              Buổi trình bày phối cảnh
             </div>
-            <div className="text-xs text-[#425466]">Phòng khách — 3 SP</div>
+            <div className="text-xs text-[#6b6459]">Trực tiếp hoặc video call</div>
           </div>
-          <span className="ml-auto text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">
-            Đã tạo
+          <span className="ml-auto text-xs font-medium text-[#8a6530] bg-amber-50 px-2 py-0.5 rounded-full">
+            Sẵn sàng
           </span>
         </div>
-        <div className="bg-blue-50 rounded-lg p-3 text-center">
-          <div className="text-xs text-[#425466] mb-2">Tổng báo giá</div>
-          <div className="text-lg font-bold text-blue-700">21,500,000đ</div>
+        <div className="bg-amber-50 rounded-lg p-3 text-center">
+          <div className="text-xs text-[#6b6459]">Báo giá chi tiết theo hạng mục</div>
         </div>
-        <button className="mt-3 w-full py-2 rounded-lg bg-[#635bff] text-white text-xs font-medium hover:bg-[#4f46e5] transition-colors">
-          Tải PDF
-        </button>
+      </div>
+    ),
+  },
+  {
+    step: "04",
+    icon: HardHat,
+    color: "from-[#8a6530] to-[#a67c3d]",
+    title: "Thi công & giám sát",
+    desc: "Ký hợp đồng, thi công với giám sát 4 mốc kiểm tra và nhóm Zalo riêng cập nhật ảnh/video theo từng mốc — không phải chờ hỏi mới biết tiến độ. Với liền kề/nhà dân, chúng tôi đo lại hiện trạng sau khi hoàn thiện phần thô, trước khi lắp nội thất.",
+    mockup: (
+      <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
+        <div className="text-xs font-semibold text-[#241f1a] mb-3">
+          4 mốc giám sát lắp đặt
+        </div>
+        <div className="space-y-1.5 text-xs text-[#6b6459]">
+          <div>Mốc 1 · Vật liệu &amp; điện đi đúng sơ đồ</div>
+          <div>Mốc 2 · Kết cấu, kích thước</div>
+          <div>Mốc 3 · Bề mặt, sơn, phụ kiện</div>
+          <div>Mốc 4 · Nghiệm thu 20 điểm</div>
+        </div>
+        <div className="mt-3 bg-amber-50 rounded-lg p-2 text-center text-xs font-semibold text-[#8a6530]">
+          + Đo lại hiện trạng (liền kề/nhà dân)
+        </div>
+      </div>
+    ),
+  },
+  {
+    step: "05",
+    icon: HeartHandshake,
+    color: "from-[#a67c3d] to-[#c9974f]",
+    title: "Đồng hành sau bàn giao",
+    desc: "Không kết thúc ở lúc bàn giao. Chúng tôi chủ động hỏi thăm sau 1-2 tuần bạn dọn vào ở, và có mặt trong 48h nếu phát sinh vấn đề trong suốt 24 tháng bảo hành.",
+    mockup: (
+      <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
+        <div className="text-xs font-semibold text-[#241f1a] mb-3">
+          Sau khi bạn dọn vào ở
+        </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Hỏi thăm sau 1-2 tuần</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
+        </div>
+        <div className="flex items-center justify-between text-xs py-1 border-b border-gray-50">
+          <span className="text-[#6b6459]">Có mặt trong 48h nếu cần</span>
+          <span className="font-medium text-[#241f1a]">✓</span>
+        </div>
+        <div className="mt-3 bg-amber-50 rounded-lg p-2 text-center text-xs font-semibold text-[#8a6530]">
+          Bảo hành 24 tháng
+        </div>
       </div>
     ),
   },
@@ -125,16 +146,25 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold tracking-widest text-purple-600 uppercase mb-4">
-            Cách hoạt động
+          <span className="inline-block text-xs font-semibold tracking-widest text-[#8a6530] uppercase mb-4">
+            Quy trình làm việc
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0a2540] mb-4">
-            Từ cấu hình đến báo giá{" "}
-            <span className="gradient-text">chỉ 3 bước</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#241f1a] mb-4">
+            Từ tư vấn đến bàn giao{" "}
+            <span className="gradient-text">rõ ràng từng bước</span>
           </h2>
-          <p className="text-lg text-[#425466] max-w-xl mx-auto">
-            Quy trình đơn giản, không cần đào tạo phức tạp. Nhân viên kinh
-            doanh có thể bắt đầu ngay sau 10 phút làm quen.
+          <p className="text-lg text-[#6b6459] max-w-xl mx-auto">
+            Không báo giá chính xác trước khi khảo sát — mọi con số đều dựa
+            trên đo đạc thực tế.
+          </p>
+        </AnimatedSection>
+
+        <AnimatedSection className="flex items-start gap-3 rounded-2xl bg-[#F3EFE7] border border-amber-100 p-5 mb-16 max-w-2xl mx-auto">
+          <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0 text-[#8a6530]">
+            <KeyRound size={18} />
+          </div>
+          <p className="text-sm text-[#6b6459] leading-relaxed">
+            <strong className="text-[#241f1a]">Mỗi bước có một &quot;cổng xác nhận&quot; riêng</strong> — phiếu khảo sát, biên nhận phí thiết kế, bản phối cảnh được duyệt... Không bước nào bắt đầu khi bước trước chưa được chính bạn xác nhận.
           </p>
         </AnimatedSection>
 
@@ -157,7 +187,7 @@ export default function HowItWorks() {
                 {/* Text */}
                 <div className="flex-1 space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-5xl font-black text-gray-100">
+                    <span className="text-5xl font-black text-stone-400">
                       {step.step}
                     </span>
                     <div
@@ -166,10 +196,10 @@ export default function HowItWorks() {
                       <Icon size={20} className="text-white" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0a2540]">
+                  <h3 className="text-2xl font-bold text-[#241f1a]">
                     {step.title}
                   </h3>
-                  <p className="text-[#425466] leading-relaxed">{step.desc}</p>
+                  <p className="text-[#6b6459] leading-relaxed">{step.desc}</p>
                 </div>
 
                 {/* Mockup */}
@@ -181,6 +211,16 @@ export default function HowItWorks() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-16">
+          <Link
+            href="/quy-trinh"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F3EFE7] text-[#8a6530] font-medium text-sm hover:bg-amber-100 transition-colors"
+          >
+            Xem chi tiết từng bước quy trình
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </section>

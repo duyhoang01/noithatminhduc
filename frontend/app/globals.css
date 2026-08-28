@@ -2,12 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a2540;
-  --primary: #635bff;
-  --primary-dark: #4f46e5;
-  --text-muted: #425466;
-  --border: #e6ebf1;
-  --surface: #f6f9fc;
+  --foreground: #241f1a;
+  --primary: #a67c3d;
+  --primary-dark: #8a6530;
+  --text-muted: #6b6459;
+  --border: #e8e0d2;
+  --surface: #f3efe7;
 }
 
 @theme inline {
@@ -33,16 +33,16 @@ html {
   box-sizing: border-box;
 }
 
-/* Gradient text utility */
+/* Gradient text utility — thương hiệu (đồng, vàng đất) */
 .gradient-text {
-  background: linear-gradient(135deg, #635bff 0%, #0080ff 50%, #00c9ff 100%);
+  background: linear-gradient(135deg, #a67c3d 0%, #c9974f 50%, #d9b06a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-warm {
-  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ff9f43 100%);
+  background: linear-gradient(135deg, #8a6530 0%, #a67c3d 50%, #c9974f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -52,22 +52,22 @@ html {
 .hero-gradient {
   background: linear-gradient(
     135deg,
-    rgba(99, 91, 255, 0.08) 0%,
-    rgba(0, 128, 255, 0.05) 50%,
-    rgba(255, 107, 107, 0.04) 100%
+    rgba(166, 124, 61, 0.1) 0%,
+    rgba(166, 124, 61, 0.04) 50%,
+    rgba(36, 31, 26, 0.03) 100%
   );
 }
 
-/* Stripe-style rainbow gradient bar */
+/* Thanh gradient thương hiệu (thay rainbow-bar) */
 .rainbow-bar {
   background: linear-gradient(
     90deg,
-    #ff6b6b,
-    #feca57,
-    #48dbfb,
-    #ff9ff3,
-    #54a0ff,
-    #5f27cd
+    #8a6530,
+    #a67c3d,
+    #c9974f,
+    #d9b06a,
+    #a67c3d,
+    #8a6530
   );
 }
 
@@ -78,5 +78,5 @@ html {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 60px rgba(36, 31, 26, 0.12);
 }
