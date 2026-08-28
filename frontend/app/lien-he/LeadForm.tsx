@@ -81,21 +81,29 @@ export default function LeadForm() {
           />
         </div>
         <div>
-          <label htmlFor="lead-interest" className="block text-sm text-[#6b6459] mb-1.5">
-            Phân khúc quan tâm
-          </label>
-          <select
-            id="lead-interest"
-            value={interest}
-            onChange={(e) => setInterest(e.target.value)}
-            className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-[#241f1a] focus:outline-none focus:border-[#a67c3d] focus:ring-1 focus:ring-[#a67c3d] bg-white"
-          >
+          <span className="block text-sm text-[#6b6459] mb-1.5">Phân khúc quan tâm</span>
+          <div className="flex flex-wrap gap-2">
             {INTEREST_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value}>
+              <label
+                key={opt.value}
+                className={`flex items-center gap-2 rounded-xl border px-3.5 py-2 text-sm cursor-pointer transition-colors ${
+                  interest === opt.value
+                    ? "border-[#a67c3d] bg-[#F3EFE7] text-[#241f1a]"
+                    : "border-gray-200 text-[#6b6459] hover:border-amber-200"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="lead-interest"
+                  value={opt.value}
+                  checked={interest === opt.value}
+                  onChange={(e) => setInterest(e.target.value)}
+                  className="accent-[#a67c3d]"
+                />
                 {opt.label}
-              </option>
+              </label>
             ))}
-          </select>
+          </div>
         </div>
 
         {status === "error" && (
