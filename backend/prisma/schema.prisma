@@ -71,6 +71,7 @@ model Lead {
   customer_id           BigInt?
   session_id            BigInt?
   status                lead_status_enum?      @default(New)
+  interest              lead_interest_enum?
   customer              customer?              @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   configuration_session configuration_session? @relation(fields: [session_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 
@@ -242,6 +243,12 @@ enum lead_status_enum {
   Contacted
   Closed_Won  @map("Closed-Won")
   Closed_Lost @map("Closed-Lost")
+}
+
+enum lead_interest_enum {
+  LIEN_KE
+  NHA_DAN
+  CHUNG_CU
 }
 
 enum order_status_enum {

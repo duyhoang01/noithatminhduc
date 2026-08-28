@@ -6,16 +6,24 @@ import { api } from "../../lib/api";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const INTEREST_OPTIONS = [
+  { value: "", label: "Chưa chắc / bỏ qua" },
+  { value: "LIEN_KE", label: "Liền kề" },
+  { value: "NHA_DAN", label: "Nhà dân" },
+  { value: "CHUNG_CU", label: "Căn hộ chung cư" },
+];
+
 export default function LeadForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [interest, setInterest] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
     try {
-      await api.createLead({ name, phone });
+      await api.createLead({ name, phone, interest: interest || undefined });
       setStatus("success");
     } catch {
       setStatus("error");
@@ -71,6 +79,23 @@ export default function LeadForm() {
             className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-[#241f1a] focus:outline-none focus:border-[#a67c3d] focus:ring-1 focus:ring-[#a67c3d]"
             placeholder="0912345678"
           />
+        </div>
+        <div>
+          <label htmlFor="lead-interest" className="block text-sm text-[#6b6459] mb-1.5">
+            Phân khúc quan tâm
+          </label>
+          <select
+            id="lead-interest"
+            value={interest}
+            onChange={(e) => setInterest(e.target.value)}
+            className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-[#241f1a] focus:outline-none focus:border-[#a67c3d] focus:ring-1 focus:ring-[#a67c3d] bg-white"
+          >
+            {INTEREST_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         {status === "error" && (
